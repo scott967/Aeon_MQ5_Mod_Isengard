@@ -48,7 +48,7 @@
 	<align>left</align>
 	<texture flipx="true">divider.png</texture>
 	</control>
-	<control type="button"><!-- Para proximas faixas -->
+	<control type="button"><!-- Para proximas faixas to next tracks -->
 	<posx>25</posx>
 	<posy>346</posy>
 	<width>250</width>

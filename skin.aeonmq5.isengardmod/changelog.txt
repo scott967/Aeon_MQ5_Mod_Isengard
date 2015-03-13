@@ -1,3 +1,39 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.7 - INITIAL RELEASE FOR ISENGARD DATE 03/05/2015[/COLOR][/B]
+
+Added:  Live TV EPG is now available to be added to the main menu via customize main menu
+Added:  Weather widgets and MyWeather now supports Yahoo! Weather  (current, 36 hour views)
+Added:  CoverFlow view now available for program addons
+Improved:  Addon TV.Show.Next.Aired widgets now work for live TV main menu
+Improved:  Addon TV.Show.Next.Aired now requries ver 6.0.10 (minimum) and no longer is run at skin startup
+Improved:  In the music m3u playlist editor dialog, button label has been changed from "CLOSE" to "CLEAN" (when this button is clicked, the list of playlist music files is cleared)
+Fixed:  Recording Preferences dialog window focus issues when PVR client is pvr.npvr (Next PVR)
+Fixed:  Adjusted positions of main menu items so the focused item (wraplist) is centered
+Improved:  On home window, when library status bar is displayed for movies, concerts, and favoristes the label "Movies", "concerts", or "widgets" is displayed as appropriate
+
+
+[B][COLOR=FFFF8C00]BUILD 6.1.6 - RELEASE DATE 02/09/2015[/COLOR][/B]
+
+Improved:  Fixed video views for Video Addons so they are properly displayed with fanart
+Fixed:  Replaced Right List View with improved version
+Fixed:  Restored Panel View for Movies, TV Shows and Music Videos to Gotham behavior when cases are not used
+Fixed:  Addon browser will now properly display addon status (enabled/disabled/downloading)
+Added:  New radio button in Panel View / View Options (top menu) for Music Videos (Concerts: Big Icon when selected will give 6.1.5 style larger icons for Music Videos regardless of "use cases".  Un-selected will give Gotham performance.)
+
+[B][COLOR=FFFF8C00]BUILD 6.1.5 - RELEASE DATE 01/25/2015[/COLOR][/B]
+
+Added:  Support for TV Channels and Guide dialog from full screen video OSD
+Added:  Radio is now available as a menu item with DPG, Recordings, and Timers
+Added:  Song Info dialog now displays song file path 
+Added:  New radiobutton option in top menu to change navigation in TV guide timeline to wrap from top channel to bottom of list vice current open top menu
+Added:  PVR recordings Prefs now supports NextPvr addon
+Improved:  Support for Radio in PVR windows
+Improved:  Layout and display of the TV Channel and Guide OSD dialogs
+Improved:  Custom home menu now shows TV / Radio as "category" for custom menus
+Improved:  Video thumb size in Panel View when media cases not used
+Fixed:  Skin Widgets label display positioning
+ 
+
+
 [B][COLOR=FFFF8C00]BUILD 6.1.4 - RELEASE DATE 12/18/2014[/COLOR][/B]
 
 Improved:  Video source content settings dialog allows better navigation/scraper settings fixed

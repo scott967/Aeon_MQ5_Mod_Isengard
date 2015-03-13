@@ -1,9 +1,9 @@
-	<!-- Aeon MQ 5 Helix 6.1.2  -->
+	<!-- Aeon MQ 5 Helix 6.1.2/6.1.7  -->
 
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<onload condition="System.HasAddon(script.games.rom.collection.browser) + ![IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
-	<onload condition="System.HasAddon(script.tv.show.next.aired) + !IsEmpty(skin.string(livetvwidget))">RunScript(script.tv.show.next.aired,silent=True)</onload>
+	<!-- <onload condition="System.HasAddon(script.tv.show.next.aired) + !IsEmpty(skin.string(livetvwidget))">RunScript(script.tv.show.next.aired,silent=True)</onload> -->
 	<onload condition="Skin.HasSetting(custommode)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>

@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5  -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7  -->
 
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
@@ -89,7 +89,7 @@
 				<texture>osd_menu_play.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="fade" start="20" end="100" time="700" condition="true" pulse="true">Conditional</animation>
-				<visible>![SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
+				<visible>![SubString(Container(9000).ListItem.Property(id),livetv) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
 			</control>
 			<control type="image">
 				<posx>21</posx>
@@ -99,7 +99,7 @@
 				<texture>osd_menu_info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="fade" start="20" end="100" time="700" condition="true" pulse="true">Conditional</animation>
-				<visible>[SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
+				<visible>[SubString(Container(9000).ListItem.Property(id),livetv) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
 			</control>
 			<control type="label">
 				<posx>7</posx>
@@ -3578,14 +3578,16 @@
 		</control>
 	</include>
 	<!-- ################################################################################ Next Aired ################################################################################ -->
-	<include name="mf_contentnextaired">
+	<include name="mf_contentnextaired">  <!-- fix for live tv -->
 		<control type="image"><!-- Fundo -->
 			<include>widgets_back</include>
-			<visible>[SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible>
+			<visible>!IsEmpty(Window(0).Property(NextAired.1.NextTitle)) + [SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
+			<!-- <visible>[SubString(Container(9000).ListItem.Property(id),livetv) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible> -->
 		</control>
 		<control type="group"><!-- Seletor de lista -->
 			<include>Animation_Widgets</include>
-			<visible>[SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible>
+			<visible>!IsEmpty(Window(0).Property(NextAired.1.NextTitle)) + [SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
+			<!-- <visible>[SubString(Container(9000).ListItem.Property(id),livetv) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible> -->
 			<control type="button" id="5100">
 				<onclick>noop</onclick>
 				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>
@@ -3599,7 +3601,8 @@
 			<posy>360</posy>
 			<control type="panel" id="510">
 				<include>panel_layout</include>
-				<visible>[SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible>
+				<visible>!IsEmpty(Window(0).Property(NextAired.1.NextTitle)) + [SubString(Container(9000).ListItem.Property(id),live) | SubString(Container(9000).ListItem.Property(id),tvguide)]</visible>
+				<!-- <visible>[SubString(Container(9000).ListItem.Property(id),livetv) | SubString(Container(9000).ListItem.Property(id),tvguide)] + !IsEmpty(Window(0).Property(NextAired.1.NextTitle))</visible -->>
 				<content>
 					<item>
 						<label>$INFO[Window(0).Property(NextAired.1.NextTitle)]</label>
@@ -38242,6 +38245,7 @@
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>$LOCALIZE[31874]</label>
 				<scroll>true</scroll>
+				<visible>!SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
 			</control>
 			<control type="label">
 				<posx>55</posx>
@@ -38288,7 +38292,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Today.AvgHighTemperature)]</label>
 				<scroll>true</scroll>
-				<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<visible>![StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
 			</control>
 			<control type="label">
 				<posx>75</posx>
@@ -38302,6 +38306,19 @@
 				<label>$INFO[Window(Weather).Property(Today.HighTemperature)]</label>
 				<scroll>true</scroll>
 				<visible>StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>295</posy>
+				<width>100</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Window(Weather).Property(Day0.HighTemp)]</label>
+				<scroll>true</scroll>
+				<visible>!IsEmpty(Window(Weather).Property(Day0.HighTemp))</visible>
 			</control>
 			<control type="image"><!-- Minima prevista -->
 				<posx>50</posx>
@@ -38322,7 +38339,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Today.AvgLowTemperature)]</label>
 				<scroll>true</scroll>
-				<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<visible>![StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
 			</control>
 			<control type="label">
 				<posx>75</posx>
@@ -38336,6 +38353,19 @@
 				<label>$INFO[Window(Weather).Property(Today.LowTemperature)]</label>
 				<scroll>true</scroll>
 				<visible>StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>330</posy>
+				<width>100</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Window(Weather).Property(Day0.LowTemp)]</label>
+				<scroll>true</scroll>
+				<visible>SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
 			</control>
 			<control type="label"><!-- Umidade -->
 				<posx>330</posx>
@@ -38372,7 +38402,7 @@
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>$LOCALIZE[403]</label>
 				<scroll>true</scroll>
-				<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<visible>![StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
 			</control>
 			<control type="label">
 				<posx>330</posx>
@@ -38385,7 +38415,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Current.UVIndex)]</label>
 				<scroll>true</scroll>
-				<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<visible>![StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
 			</control>
 			<control type="label"><!-- Pt Orvalho -->
 				<posx>330</posx>
@@ -38456,11 +38486,11 @@
 			</control>
 
 			<!-- 7 day -->
-			<control type="grouplist">
+			<control type="grouplist"> <!-- except yahoo -->
 				<posx>360</posx>
 				<posy>100</posy>
 				<orientation>horizontal</orientation>
-				<visible>SubString(skin.string(weather_mode),7days)</visible>
+				<visible>SubString(skin.string(weather_mode),7days) + !SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
 				<control type="group"><!-- Day 1 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
@@ -38753,14 +38783,290 @@
 					</control>
 				</control>
 			</control>
-
+			<control type="grouplist"> <!-- yahoo weather -->
+				<posx>360</posx>
+				<posy>100</posy>
+				<orientation>horizontal</orientation>
+				<visible>SubString(skin.string(weather_mode),7days) + SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<control type="group"><!-- Day 1 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day1.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day1.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day1.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 2 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day2.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day2.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day2.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 3 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day3.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day3.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day3.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 4 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<visible>!IsEmpty(Window(Weather).Property(Day4.HighTemp))</visible>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day4.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day4.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day4.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 5 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<visible>!IsEmpty(Window(Weather).Property(Day5.Title))</visible>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day5.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day5.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day5.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day5.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 6 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<visible>!IsEmpty(Window(Weather).Property(Day6.Title))</visible>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day6.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day6.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day6.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day6.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 7 -->
+					<include>Widget_Weather7Day</include>
+					<include>Animation_HomeFade</include>
+					<visible>!IsEmpty(Window(Weather).Property(Day7.Title))</visible>
+					<control type="label">
+						<include>Widget_WeatherTitle7Day</include>
+						<label>$INFO[Window(Weather).Property(Day7.Title)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowUp</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempHigh</include>
+						<label>$INFO[Window(Weather).Property(Day7.HighTemp)]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherArrowDown</include>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTempLow</include>
+						<label>$INFO[Window(Weather).Property(Day7.LowTemp)]</label>
+					</control>
+					<control type="image">
+						<texture>$INFO[Window(Weather).Property(Day7.OutlookIcon)]</texture>
+						<include>Widget_WeatherIcon7Day</include>
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day7.FanartCode)]</imagepath>
+						<include>Widget_WeatherIcon7Day</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator7Day</include>
+					</control>
+				</control>
+			</control>
+			
 			<!-- Weekend-->
 			<control type="grouplist">
 				<posx>480</posx>
 				<posy>100</posy>
 				<orientation>horizontal</orientation>
 				<itemgap>330</itemgap>
-				<visible>SubString(skin.string(weather_mode),weekend)</visible>
+				<visible>SubString(skin.string(weather_mode),weekend) + !SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
 				<control type="group"><!-- Day 1 -->
 					<include>Widget_WeatherWeekend</include>
 					<include>Animation_HomeFade</include>
@@ -38852,7 +39158,7 @@
 				<posy>100</posy>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
-				<visible>SubString(skin.string(weather_mode),36hour)</visible>
+				<visible>SubString(skin.string(weather_mode),36hour) + !SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
 				<control type="group"><!-- Day 1 -->
 					<include>Widget_Weather36hour</include>
 					<include>Animation_HomeFade</include>
@@ -38961,6 +39267,132 @@
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
 						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.3.FanartCode)]</imagepath>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+				</control>
+			</control>
+			<!-- 36 hour Yahoo -->
+			<control type="grouplist">
+				<posx>400</posx>
+				<posy>100</posy>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<visible>SubString(skin.string(weather_mode),36hour) + SubString(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<control type="group"><!-- Day 1 -->
+					<include>Widget_Weather36hour</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle36hour</include>
+						<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTemp36hour</include>
+						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day0.HighTemp)]/$INFO[Window(Weather).Property(Day0.LowTemp)][/COLOR]</label>
+					</control>
+					<!-- <control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(36Hour.1.ChancePrecipitation)][/COLOR]</label>
+						<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						</control> -->
+					<control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day0.Outlook)][/COLOR]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherIcon36hour</include>
+						<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>	
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">	
+						<include>Widget_WeatherIcon36hour</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day0.FanartCode)]</imagepath>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator36hour</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 2 -->
+					<include>Widget_Weather36hour</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle36hour</include>
+						<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTemp36hour</include>
+						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day1.HighTemp)]/$INFO[Window(Weather).Property(Day1.LowTemp)][/COLOR]</label>
+					</control>
+					<!-- <control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(36Hour.2.ChancePrecipitation)][/COLOR]</label>
+						<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						</control>
+					<control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(36Hour.2.Precipitation)][/COLOR]</label>
+						<visible>StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						</control> -->
+					<control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day1.Outlook)][/COLOR]</label>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherIcon36hour</include>
+						<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>	
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">	
+						<include>Widget_WeatherIcon36hour</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day1.FanartCode)]</imagepath>
+						<visible>Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="image">
+						<include>Widget_WeatherSeparator36hour</include>
+					</control>
+				</control>
+				<control type="group"><!-- Day 3 -->
+					<include>Widget_Weather36hour</include>
+					<include>Animation_HomeFade</include>
+					<control type="label">
+						<include>Widget_WeatherTitle36hour</include>
+						<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherTemp36hour</include>
+						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day2.HighTemp)]/$INFO[Window(Weather).Property(Day2.LowTemp)][/COLOR]</label>
+					</control>
+					<control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(Day2.Outlook)][/COLOR]</label>
+					</control>
+					<!-- <control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(36Hour.3.ChancePrecipitation)][/COLOR]</label>
+						<visible>!StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						</control>
+					<control type="label">
+						<include>Widget_WeatherPrecipitation36hour</include>
+						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Window(Weather).Property(36Hour.3.Precipitation)][/COLOR]</label>
+						<visible>StringCompare(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						</control> -->
+					<control type="image">
+						<include>Widget_WeatherIcon36hour</include>
+						<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>	
+						<visible>!Skin.HasSetting(weathericons)</visible>
+					</control>
+					<control type="multiimage">	
+						<include>Widget_WeatherIcon36hour</include>
+						<timeperimage>75</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
+						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Day2.FanartCode)]</imagepath>
 						<visible>Skin.HasSetting(weathericons)</visible>
 					</control>
 				</control>

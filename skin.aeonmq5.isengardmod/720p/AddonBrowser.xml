@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.4 -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.4/6.1.6 -->
 
 <window id="40">
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -65,11 +65,11 @@
 							<scrollout>false</scrollout>
 						</control>
 						<control type="label">
-							<posx>960</posx>
+							<posx>720</posx>
 							<posy>0</posy>
 							<width>290</width>
 							<height>40</height>
-							<align>right</align>
+							<align>left</align>
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FFFFFAF0</textcolor>
@@ -101,11 +101,11 @@
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="label">
-							<posx>960</posx>
+							<posx>720</posx>
 							<posy>0</posy>
 							<width>290</width>
 							<height>40</height>
-							<align>right</align>
+							<align>left</align>
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FF101010</textcolor>
@@ -128,11 +128,11 @@
 							<visible>!Control.HasFocus(55)</visible>
 						</control>
 						<control type="label">
-							<posx>960</posx>
+							<posx>720</posx>
 							<posy>0</posy>
 							<width>290</width>
 							<height>40</height>
-							<align>right</align>
+							<align>left</align>
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FFFFFAF0</textcolor>

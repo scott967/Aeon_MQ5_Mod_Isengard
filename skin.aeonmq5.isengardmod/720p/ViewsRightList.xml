@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.1/6.1.2 by lizard -->
+	<!-- Aeon MQ 5 Helix 6.1.1/6.1.2 by lizard/6.1.6 -->
 
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
@@ -191,6 +191,7 @@
 					<width>560</width>
 					<height>550</height>
 					<texture>osd_black_bg.png</texture>
+					<animation effect="fade" start="100" end="10" time="2000" condition="!Control.Hasfocus(51)">conditional</animation>
 				</control>
 
 				<control type="fixedlist" id="59">
@@ -224,7 +225,7 @@
 							<width>480</width>
 							<height>30</height>
 							<font>Font_20</font>
-							<align>left</align>
+							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -246,7 +247,6 @@
 							<width>630</width>
 							<height>30</height>
 							<texture>settings_button_focus.png</texture>
-							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -254,7 +254,7 @@
 							<width>480</width>
 							<height>30</height>
 							<font>Font_22</font>
-							<align>left</align>
+							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -271,11 +271,12 @@
 					</focusedlayout>
 					<focusedlayout condition="!IsEmpty(Control.GetLabel(5902)) + [Window.IsActive(25) + !Skin.HasSetting(slimrightlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(slimrightlistmusic)]" height="50">
 						<control type="image">
+							<animation effect="fade" start="100" end="60" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>650</width>
+							<width>680</width>
 							<height>50</height>
-							<texture>topmenu_button_nofocus.png</texture>
+							<texture flipx="true">gradient_button.png</texture>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -283,7 +284,7 @@
 							<width>480</width>
 							<height>30</height>
 							<font>Font_22</font>
-							<align>left</align>
+							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -294,7 +295,7 @@
 							<width>480</width>
 							<height>16</height>
 							<font>Font_18A</font>
-							<align>left</align>
+							<align>right</align>
 							<aligny>center</aligny>
 							<include>subcolorfocus</include>
 							<label>$VAR[value_listinfofocus]</label>

@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.1/6.1.3 -->
+	<!-- Aeon MQ 5 Helix 6.1.1/6.1.3/6.1.5 -->
 
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
@@ -367,7 +367,7 @@
 						<onright>4</onright>
 						<onup>13</onup>
 						<ondown>31</ondown>
-						<visible>IsEmpty(Window.Property(IsRadio))</visible>
+						<visible>IsEmpty(Window.Property(IsRadio)) + Pvr.HasRadioChannels</visible>
 					</control>
 					<control type="button" id="34"><!-- TV/Radio -->
 						<textoffsetx>40</textoffsetx>

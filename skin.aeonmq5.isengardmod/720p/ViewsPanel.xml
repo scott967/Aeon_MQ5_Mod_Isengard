@@ -37,7 +37,31 @@
 					<pagecontrol>80</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<visible>!Container.Content(years)</visible>
-					<itemlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="180" height="150"><!-- POSTER SEM ESTOJO -->
+					<itemlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
+						<control type="image">
+							<posx>8</posx>
+							<posy>6</posy>
+							<width>100</width>
+							<height>141</height>
+							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="image">
+							<posx>81</posx>
+							<posy>5</posy>
+							<width>25</width>
+							<height>25</height>
+							<texture>$VAR[value_watchedstyle]</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>	
+							<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+						<control type="image">
+							<include>Panel_Dimmer</include>
+							<width>120</width>
+							<height>170</height>
+						</control>
+					</itemlayout>
+					<itemlayout condition="Container.Content(musicvideos) + Skin.HasSetting(nopanelbigicon)" width="180" height="150"><!-- music videos big icons -->
 						<control type="image">
 							<posx>8</posx>
 							<posy>6</posy>
@@ -100,7 +124,7 @@
 							<height>180</height>
 						</control>
 					</itemlayout>
-					<itemlayout condition="Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) + !Skin.HasSetting(nopanelvideocase)  | !Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) | Container.Content(sets)]" width="120" height="172"><!-- ESTOJO -->
+					<itemlayout condition="Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) + !Skin.HasSetting(nopanelvideocase)  | !Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)]" width="120" height="172"><!-- ESTOJO -->
 						<control type="image"><!-- Poster com estojo -->
 							<posx>9</posx>
 							<posy>18</posy>
@@ -190,7 +214,34 @@
 							<height>120</height>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="180" height="150"><!-- POSTER SEM ESTOJO -->
+					<focusedlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
+						<control type="image">
+							<posx>8</posx>
+							<posy>6</posy>
+							<width>100</width>
+							<height>141</height>
+							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="80" end="100" time="400" />
+							</animation>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="image">
+							<posx>81</posx>
+							<posy>5</posy>
+							<width>25</width>
+							<height>25</height>
+							<texture>$VAR[value_watchedstyle]</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="80" end="100" time="400" />
+							</animation>
+							<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="Container.Content(musicvideos) + Skin.HasSetting(nopanelbigicon)" width="180" height="150"><!-- music video big icons -->
 						<control type="image">
 							<posx>8</posx>
 							<posy>6</posy>
@@ -261,7 +312,7 @@
 							<visible>[!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)]</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) + !Skin.HasSetting(nopanelvideocase)  | !Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) | Container.Content(sets)]" width="120" height="172"><!-- ESTOJO -->
+					<focusedlayout condition="Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) + !Skin.HasSetting(nopanelvideocase)  | !Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)]" width="120" height="172"><!-- ESTOJO -->
 						<control type="image">
 							<posx>9</posx>
 							<posy>18</posy>

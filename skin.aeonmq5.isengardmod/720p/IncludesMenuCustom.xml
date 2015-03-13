@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 -->
+	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7 -->
 
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
@@ -1978,11 +1978,19 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>19021</label><!-- Radio --><!-- 6005 -->
+					<label2>19021</label2>
+					<property name="id">livetv</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvradiostations)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(radiochannels))</onclick>
+					<include>DefaultReset</include>
+				</item>
+				<item>
 					<label>$LOCALIZE[19023]</label><!-- TV ao vivo Canais de TV --><!-- 6522 -->
 					<label2>$LOCALIZE[19023]</label2>
 					<property name="id">livetv</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvchannels)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVChannels))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvchannels))</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -1990,24 +1998,16 @@
 					<label2>$LOCALIZE[31006]-$LOCALIZE[19069]</label2>
 					<property name="id">livetv</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvepg)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVGuide))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvguide))</onclick>
 					<include>DefaultReset</include>
-					<visible>Skin.HasSetting(submode)</visible>
-				</item>
-				<item>
-					<label>$LOCALIZE[19024]</label><!-- TV ao vivo Estacoes de Radio --><!-- 6524 -->
-					<label2>$LOCALIZE[19024]</label2>
-					<property name="id">livetv</property>
-					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvradiostations)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(RadioChannels))</onclick>
-					<include>DefaultReset</include>
+					<!-- <visible>Skin.HasSetting(submode)</visible> -->
 				</item>
 				<item>
 					<label>$LOCALIZE[31006]-$LOCALIZE[19163]</label><!-- TV ao vivo Estacoes de Radio --><!-- 6525 -->
 					<label2>$LOCALIZE[31006]-$LOCALIZE[19163]</label2>
 					<property name="id">livetv</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvrecords)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVRecordings))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvrecordings))</onclick>
 					<include>DefaultReset</include>
 					<visible>Skin.HasSetting(submode)</visible>
 				</item>
@@ -2016,7 +2016,42 @@
 					<label2>$LOCALIZE[31006]-$LOCALIZE[19040]</label2>
 					<property name="id">livetv</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvtimers)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVTimers))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvtimers))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[19024]</label><!-- Radio Channels --><!-- 6524 -->
+					<label2>$LOCALIZE[19024]</label2>
+					<property name="id">livetv</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvradiostations)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(radiochannels))</onclick>
+					<include>DefaultReset</include>
+				</item>
+				<item>
+					<label>$LOCALIZE[19021]-$LOCALIZE[19069]</label><!-- Radio EPG --><!-- 6523 -->
+					<label2>$LOCALIZE[19021]-$LOCALIZE[19069]</label2>
+					<property name="id">livetv</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvepg)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(radioguide))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[19021]-$LOCALIZE[19163]</label><!-- Radio Recordings --><!-- 6525 -->
+					<label2>$LOCALIZE[19021]-$LOCALIZE[19163]</label2>
+					<property name="id">livetv</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvrecords)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(radiorecordings))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[19021]-$LOCALIZE[19040]</label><!-- Radio timers --><!-- 6526 -->
+					<label2>$LOCALIZE[19021]-$LOCALIZE[19040]</label2>
+					<property name="id">livetv</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvtimers)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(radiotimers))</onclick>
 					<include>DefaultReset</include>
 					<visible>Skin.HasSetting(submode)</visible>
 				</item>

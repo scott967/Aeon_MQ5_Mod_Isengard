@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.aeonmq5" version="7.1.5" name="Aeon MQ 5 Isengard" provider-name="MarcosQui">
+	<addon id="skin.aeonmq5" version="7.1.7" name="Aeon MQ 5 Isengard" provider-name="MarcosQui">
 	<requires>
 	<import addon="xbmc.gui" version="5.6.0"/>
 	<import addon="script.aeonmq5.extrapack" version="1.0.1"/>
@@ -8,7 +8,7 @@
 	<import addon="script.randomandlastitems" version="2.0.3"/>
 	<import addon="script.games.rom.collection.browser" version="2.0.10"/>
 	<import addon="script.artistslideshow" version="1.4.6"/>
-	<import addon="script.tv.show.next.aired" version="5.0.4"/>
+	<import addon="script.tv.show.next.aired" version="6.0.10"/>
 	<import addon="service.skin.widgets" version="0.0.19"/>
 	<import addon="script.cu.lrclyrics" version="1.0.1"/>
 	<import addon="script.videolanguage" version="0.0.6"/>
