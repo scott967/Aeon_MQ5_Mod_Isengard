@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 	<addon id="skin.aeonmq5" version="7.1.7" name="Aeon MQ 5 Isengard" provider-name="MarcosQui">
 	<requires>
-	<import addon="xbmc.gui" version="5.6.0"/>
+	<import addon="xbmc.gui" version="5.8.0"/>
 	<import addon="script.aeonmq5.extrapack" version="1.0.1"/>
 	<import addon="script.favourites" version="4.0.4"/>
 	<import addon="script.artwork.downloader" version="12.0.11"/>
@@ -16,7 +16,7 @@
 	<import addon="service.subtitles.opensubtitles" version="5.0.1"/>
 	<import addon="script.cinema.experience" version="3.0.6"/>
 	</requires>
-	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.75" debugging="false">
+	<extension point="xbmc.gui.skin"  effectslowdown="0.75" debugging="false">
 	<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
