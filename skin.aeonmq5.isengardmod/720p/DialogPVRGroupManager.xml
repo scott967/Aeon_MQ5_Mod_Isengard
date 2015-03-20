@@ -1,7 +1,7 @@
-	<!-- Aeon MQ 5 Helix 6.1.1/6.1.3 -->
+	<!-- Aeon MQ 5 Helix 6.1.1/6.1.3 Isengard 7.1.8 -->
 
 <window>
-	<defaultcontrol always="true">29</defaultcontrol>
+	<defaultcontrol always="true">6</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 	</coordinates>
@@ -434,8 +434,8 @@
 						<label>31993</label>
 						<onleft>12</onleft>
 						<onright>27</onright>
-						<onup>29</onup>
-						<ondown>29</ondown>
+						<onup>25</onup>
+						<ondown>25</ondown>
 					</control>
 					<control type="button" id="27"><!-- rename grp -->
 						<textoffsetx>40</textoffsetx>
@@ -454,17 +454,19 @@
 						<posx>223</posx>
 						<posy>60</posy>
 						<label>31995</label>
-						<onleft>29</onleft>
+						<onleft>25</onleft>
 						<onright>13</onright>
 						<onup>27</onup>
 						<ondown>9000</ondown>
 					</control>
-					<control type="button" id="29"><!-- ok-->
+					<control type="radiobutton" id="25"><!-- hide group -->
 						<textoffsetx>40</textoffsetx>
+						<radioposx>130</radioposx>
 						<include>PVRSearchButtonSmall</include>
+						<include>Animation_Fade</include>
 						<posx>0</posx>
 						<posy>60</posy>
-						<label>186</label>
+						<label>19289</label>
 						<onleft>12</onleft>
 						<onright>28</onright>
 						<onup>26</onup>
@@ -497,14 +499,14 @@
 			<control type="grouplist" id="9000">
 				<posx>140</posx>
 				<posy>600</posy>
-				<onup>9</onup>
-				<ondown>9</ondown>
+				<onup>13</onup>
+				<ondown>13</ondown>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
-				<control type="button"><!-- OK -->
+				<control type="button" id="29"><!-- OK -->
 					<width>333</width>
 					<include>SettingsBottomButton</include>
-					<onclick>PreviousMenu</onclick>
+					<!-- <onclick>PreviousMenu</onclick>  -->
 					<label>186</label>
 				</control>
 				<control type="button" id="5"><!-- Aplicar -->
