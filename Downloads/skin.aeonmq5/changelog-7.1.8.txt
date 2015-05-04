@@ -1,0 +1,9 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.8 - RELEASE DATE 05/01/2015[/COLOR][/B]
+
+Added:  All fixes from Helixmod 6.1.8
+New:  GUI navigation sounds have been removed from skin and now are in a separate resource addon
+New:  The seek bar now shows the current seek rate
+New:  Update the label in the Video OSD bookmarks dialog for chapter name and time pr 6812
+Modified:  Requires xbmc.gui 5.9.0 (Kodi 15.0 beta 1 and up)
+New:  Addon browser now has buttons to hide broken addons and update repos  pr 6602
+
