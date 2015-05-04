@@ -1,9 +1,10 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2/6.1.3/6.1.4/6.1.5/6.1.6/6.1.7/Isengard 7.1.8 -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2/6.1.3/6.1.4/6.1.5/6.1.6/6.1.7/6.1.8 -->
+	<!-- Aeon MQ5 Isengard 7.1.8 -->
 
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>7.1.8 Isengard[COLOR=80FFFFFF] | [/COLOR]03/03/2015</value>
+		<value>7.1.8 Isengard[COLOR=80FFFFFF] | [/COLOR]05/01/2015</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -1059,6 +1060,13 @@
 		<value condition="SubString(ListItem.Mpaa,UK:12A)">flags/mpaa/BBFC_12A_Certificate_UK.png</value>
 		<value condition="SubString(ListItem.Mpaa,UK:15)">flags/mpaa/BBFC_15_Certificate_UK.png</value>
 		<value condition="SubString(ListItem.Mpaa,UK:18)">flags/mpaa/BBFC_18_Certificate_UK.png</value>
+		<!--French Flags-->
+		<value condition="SubString(ListItem.Mpaa,France:U) | SubString(ListItem.Mpaa,Tous publics)">flags/mpaa/csaU.png</value>
+		<value condition="SubString(ListItem.Mpaa,France:10) | SubString(ListItem.Mpaa,Déconseillé aux moins de 10 ans)">flags/mpaa/csa10.png</value>
+		<value condition="SubString(ListItem.Mpaa,France:12) | SubString(ListItem.Mpaa,Déconseillé aux moins de 12 ans)">flags/mpaa/csa12.png</value>
+		<value condition="SubString(ListItem.Mpaa,France:16) | SubString(ListItem.Mpaa,Déconseillé aux moins de 16 ans)">flags/mpaa/csa16.png</value>
+		<value condition="SubString(ListItem.Mpaa,France:18) | SubString(ListItem.Mpaa,Déconseillé aux moins de 18 ans)">flags/mpaa/csa18.png</value>		
+		<!--End French Flags-->
 		<value condition="SubString(ListItem.Mpaa,Brazil:Livre) | SubString(ListItem.Mpaa,Livre)">flags/mpaa/MPAA_Brazil_Livre.png</value>
 		<value condition="SubString(ListItem.Mpaa,Brazil:10) | SubString(ListItem.Mpaa,10 anos)">flags/mpaa/MPAA_Brazil_10.png</value>
 		<value condition="SubString(ListItem.Mpaa,Brazil:12) | SubString(ListItem.Mpaa,12 anos)">flags/mpaa/MPAA_Brazil_12.png</value>
@@ -1094,6 +1102,13 @@
 		<value condition="SubString(Videoplayer.Mpaa,UK:12A)">flags/mpaa/BBFC_12A_Certificate_UK.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,UK:15)">flags/mpaa/BBFC_15_Certificate_UK.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,UK:18)">flags/mpaa/BBFC_18_Certificate_UK.png</value>
+		<!--French Flags-->
+		<value condition="SubString(Videoplayer.Mpaa,France:U) | SubString(Videoplayer.Mpaa,Tous publics)">flags/mpaa/csaU.png</value>
+		<value condition="SubString(Videoplayer.Mpaa,France:10) | SubString(Videoplayer.Mpaa,Déconseillé aux moins de 10 ans)">flags/mpaa/csa10.png</value>
+		<value condition="SubString(Videoplayer.Mpaa,France:12) | SubString(Videoplayer.Mpaa,Déconseillé aux moins de 12 ans)">flags/mpaa/csa12.png</value>
+		<value condition="SubString(Videoplayer.Mpaa,France:16) | SubString(Videoplayer.Mpaa,Déconseillé aux moins de 16 ans)">flags/mpaa/csa16.png</value>
+		<value condition="SubString(Videoplayer.Mpaa,France:18) | SubString(Videoplayer.Mpaa,Déconseillé aux moins de 18 ans)">flags/mpaa/csa18.png</value>
+		<!--End French Flags-->
 		<value condition="SubString(Videoplayer.Mpaa,Brazil:Livre) | SubString(Videoplayer.Mpaa,Livre)">flags/mpaa/MPAA_Brazil_Livre.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,Brazil:10) | SubString(Videoplayer.Mpaa,10 anos)">flags/mpaa/MPAA_Brazil_10.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,Brazil:12) | SubString(Videoplayer.Mpaa,12 anos)">flags/mpaa/MPAA_Brazil_12.png</value>
@@ -1129,6 +1144,13 @@
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),UK:12A)">flags/mpaa/BBFC_12A_Certificate_UK.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),UK:15)">flags/mpaa/BBFC_15_Certificate_UK.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),UK:18)">flags/mpaa/BBFC_18_Certificate_UK.png</value>
+		<!--French Flags-->	
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:U) | SubString(Container(510).ListItem.Property(Mpaa),Tous publics)">flags/mpaa/csaU.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:10) | SubString(Container(510).ListItem.Property(Mpaa),Déconseillé aux moins de 10 ans)">flags/mpaa/csa10.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:12) | SubString(Container(510).ListItem.Property(Mpaa),Déconseillé aux moins de 12 ans)">flags/mpaa/csa12.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:16) | SubString(Container(510).ListItem.Property(Mpaa),Déconseillé aux moins de 16 ans)">flags/mpaa/csa16.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:18) | SubString(Container(510).ListItem.Property(Mpaa),Déconseillé aux moins de 18 ans)">flags/mpaa/csa18.png</value>
+		<!--End French Flags-->
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Brazil:Livre) | SubString(Container(510).ListItem.Property(Mpaa),Livre)">flags/mpaa/MPAA_Brazil_Livre.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Brazil:10) | SubString(Container(510).ListItem.Property(Mpaa),10 anos)">flags/mpaa/MPAA_Brazil_10.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Brazil:12) | SubString(Container(510).ListItem.Property(Mpaa),12 anos)">flags/mpaa/MPAA_Brazil_12.png</value>
@@ -3963,5 +3985,10 @@
 		<value condition="SubString(skin.string(theme),darkness)">special://userdata/addon_data/skin.aeonmq5.extrapack/backgrounds_darkness/addons.jpg</value>
 		<value condition="SubString(skin.string(theme),digitalart)">special://userdata/addon_data/skin.aeonmq5.extrapack/backgrounds_digitalart/addons.jpg</value>
 		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,addons]</value>
+	</variable>
+	<variable name="SeekLabel">
+        <value condition="!IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31997][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekStepSize][/COLOR]</value>
+		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[31997][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
+		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[31997]</value>
 	</variable>
 </includes>
