@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.4/6.1.6 -->
+	<!-- Aeon MQ 5 Isengard 7.1.8 -->
 
 <window id="40">
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -254,6 +255,13 @@
 				</control>
 				<control type="radiobutton" id ="7"><!-- Language filter -->
 					<label>25001</label>
+				</control>
+				<control type="radiobutton" id="8"> <!-- hide broken -->
+					<description>Hide broken</description>
+					<label>24999</label>
+				</control>
+				<control type="button" id ="9"><!-- check for Updates -->
+					<label>24034</label>
 				</control>
 				<control type="radiobutton" id ="500"><!-- Add-on fanart -->
 					<label>31265</label>
