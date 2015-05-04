@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7 -->
+	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
@@ -2009,7 +2009,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvrecords)</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvrecordings))</onclick>
 					<include>DefaultReset</include>
-					<visible>Skin.HasSetting(submode)</visible>
+					<!-- <visible>Skin.HasSetting(submode)</visible> -->
 				</item>
 				<item>
 					<label>$LOCALIZE[31006]-$LOCALIZE[19040]</label><!-- TV ao vivo Agendamento --><!-- 6526 -->

@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2 /6.1.3 -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2 /6.1.3/6.1.8 -->
 
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -139,7 +139,7 @@
 				<animation effect="slide" start="-500,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout">WindowClose</animation>
 				<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout">Hidden</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(id),livetv) + !Skin.HasSetting(submode) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+				<visible>[StringCompare(Container(9000).ListItem.Property(id),livetv) |  StringCompare(Container(9000).ListItem.Property(id),livetvepg) |  StringCompare(Container(9000).ListItem.Property(id),livetvrecords)] + !Skin.HasSetting(submode) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>630</posy>

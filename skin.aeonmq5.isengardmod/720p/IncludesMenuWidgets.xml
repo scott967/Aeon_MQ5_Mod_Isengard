@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7  -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  -->
 
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
@@ -237,7 +237,8 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.1.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.1.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.1.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.1.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.1.Play)]</onclick>
+						<!-- <onclick>$INFO[Window(0).Property(RecentMovie.1.Play)]</onclick> -->
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.1.Title))</visible>
 					</item>
 					<item>
@@ -255,7 +256,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.2.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.2.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.2.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.2.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.2.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.2.Title))</visible>
 					</item>
 					<item>
@@ -273,7 +274,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.3.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.3.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.3.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.3.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.3.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.3.Title))</visible>
 					</item>
 					<item>
@@ -291,7 +292,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.4.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.4.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.4.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.4.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.4.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.4.Title)) + [SubString(skin.string(widgetsnumber),4) + IsEmpty(Window(0).Property(RecommendedMovie.1.Title)) | SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
@@ -309,7 +310,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.5.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.5.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.5.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.5.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.5.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.5.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
@@ -327,7 +328,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.6.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.6.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.6.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.6.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.6.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.6.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
@@ -345,7 +346,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.7.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.7.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.7.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.7.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.7.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.7.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
@@ -363,7 +364,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.8.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.8.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.8.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.8.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.8.Title)) + [SubString(skin.string(widgetsnumber),8) + IsEmpty(Window(0).Property(RecommendedMovie.1.Title)) | SubString(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
@@ -381,7 +382,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.9.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.9.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.9.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.9.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.9.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.9.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
@@ -399,7 +400,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.10.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.10.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.10.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.10.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.10.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.10.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
@@ -417,7 +418,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.11.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.11.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.11.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.11.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.11.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.11.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
@@ -435,7 +436,7 @@
 						<property name="Codec">$INFO[Window(0).Property(RecentMovie.12.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(0).Property(RecentMovie.12.DBID)])</onclick>
 						<onclick condition="!IsEmpty(Window(0).Property(RecentMovie.12.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(0).Property(RecentMovie.12.Trailer)])</onclick>
-						<onclick>$INFO[Window(0).Property(RecentMovie.12.Play)]</onclick>
+						<onclick>ActivateWindow(639)</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecentMovie.12.Title)) + [IsEmpty(Window(0).Property(RecommendedMovie.1.Title)) | Skin.HasSetting(noprogresswidget)] + SubString(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
