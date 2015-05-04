@@ -4240,6 +4240,10 @@ msgctxt "#31996"
 msgid "AVAILABLE[CR]GROUPS"
 msgstr ""
 
+msgctxt "#31997
+msgid "SEEKING"
+msgstr ""
+
 msgctxt "#31999"
 msgid ""
 "The Original Aeon Skin and its name are intelectual property of djh_. The "
