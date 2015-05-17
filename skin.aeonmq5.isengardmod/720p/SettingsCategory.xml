@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/Orby/6.1.4 -->
+	<!-- Isengard 7.1.9 -->
 
 <window id="12">
 	<defaultcontrol>3</defaultcontrol>
@@ -109,6 +110,8 @@
 				<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 				<aligny>center</aligny>
+			</control>
+			<control type="label" id="14">
 			</control>
 			<include>RSS</include>
 			<control type="scrollbar" id="80">
