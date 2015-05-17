@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.4/6.1.5 -->
+	<!-- Isengard 7.1.9 ShelfCase -->
 
 <includes>
 	<include file="Defaults.xml"/>
@@ -25,6 +26,7 @@
 	<include file="ViewsMultiplex.xml"/><!-- 61 -->
 	<include file="ViewsPanel.xml"/><!-- 62 -->
 	<include file="ViewsShelf.xml"/><!-- 63 -->
+	<include file="ViewsShelfCase.xml"/><!-- 69 -->  <!-- ShelfCase Mod -->
 	<include file="ViewsLandScapeX.xml"/><!-- 64 -->
 	<include file="ViewsSets.xml"/><!-- 65 -->
 	<include file="ViewsShowCase.xml"/><!-- 66 -->

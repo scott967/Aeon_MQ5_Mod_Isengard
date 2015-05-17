@@ -3750,6 +3750,7 @@ msgstr "SEASON"
 msgctxt "#31877"
 msgid "EPG:CHANNEL"
 msgstr "EPG:CHANNEL"
+
 msgctxt "#31878"
 msgid "SHELFCASE"
 msgstr "SHELFCASE"

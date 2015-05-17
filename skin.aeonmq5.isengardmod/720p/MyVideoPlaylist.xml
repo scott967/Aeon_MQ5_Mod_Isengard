@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.2 -->
+	<!-- Isengard 7.1.9 ShelfCase -->
 
 <window id="28">
 	<defaultcontrol always="true">51</defaultcontrol>
@@ -9,7 +10,7 @@
 	<onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,backend=True)</onload> 
 	<!-- <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,backend=true)</onload> -->
 	<allowoverlay>no</allowoverlay>
-	<views>51,52,53,54,55,56,57,59,60,61,62,63,64,65</views>
+	<views>51,52,53,54,55,56,57,59,60,61,62,63,64,65,69</views>
 	<controls>
 		<control type="image"><!-- Imagem padrao -->
 			<include>WindowBG</include>
@@ -39,7 +40,7 @@
 				<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">Hidden</animation>
-				<visible>[Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(63) | Control.IsVisible(64) | Control.IsVisible(65)] + ![Control.HasFocus(9920) | Window.IsActive(2003)]</visible>
+				<visible>[Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(63) | Control.IsVisible(64) | Control.IsVisible(65) | Control.IsVisible(69)] + ![Control.HasFocus(9920) | Window.IsActive(2003)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -238,6 +239,7 @@
 				<include condition="!Skin.HasSetting(noviewmultiplex_video)">ViewMultiplex</include><!-- 61 -->
 				<include condition="!Skin.HasSetting(noviewpanel_video)">ViewPanel</include><!-- 62 -->
 				<include condition="!Skin.HasSetting(noviewshelf_video)">ViewShelf</include><!-- 63 -->
+				<include condition="!Skin.HasSetting(noviewshelfcase_video)">ViewShelfCase</include><!-- 69 -->  <!-- ShelfCase Mod -->
 				<include condition="!Skin.HasSetting(noviewlandscapex_video)">ViewLandScapeX</include><!-- 64 -->
 				<include condition="!Skin.HasSetting(noviewsets_video)">ViewSets</include><!-- 65 -->
 			</control>

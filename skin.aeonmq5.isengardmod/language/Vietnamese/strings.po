@@ -3756,6 +3756,10 @@ msgctxt "#31877"
 msgid "EPG:CHANNEL"
 msgstr ""
 
+msgctxt "#31878"
+msgid "SHELFCASE"
+msgstr "SHELFCASE"
+
 msgctxt "#31879"
 msgid "USE EXTERNAL MEDIA CASES OF PACKAGE (USER DEFINED)"
 msgstr ""
