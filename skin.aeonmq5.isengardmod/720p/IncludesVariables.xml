@@ -1,10 +1,10 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2/6.1.3/6.1.4/6.1.5/6.1.6/6.1.7/6.1.8 -->
-	<!-- Aeon MQ5 Isengard 7.1.8 -->
+	<!-- Aeon MQ5 Isengard 7.1.8/7.1.9 -->
 
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>7.1.8 Isengard[COLOR=80FFFFFF] | [/COLOR]05/01/2015</value>
+		<value>7.1.9 Isengard[COLOR=80FFFFFF] | [/COLOR]05/01/2015</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -3185,7 +3185,7 @@
 	<variable name="value_librarystatus">
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),movies)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20342]: [/COLOR]$INFO[Window(0).Property(Movies.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(Movies.UnWatched)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),tvshows)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20343]: [/COLOR]$INFO[Window(0).Property(TVShows.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[20360]:[/COLOR] $INFO[Window(0).Property(Episodes.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window(0).Property(Episodes.UnWatched)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(id),concerts)">[COLOR=$VAR[value_headercolor]][LOWERCASE]$LOCALIZE[31013][/LOWERCASE]: [/COLOR]$INFO[Window(0).Property(MusicVideos.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(MusicVideos.UnWatched)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(id),concerts)">[COLOR=$VAR[value_headercolor]][CAPITALIZE][LOWERCASE]$LOCALIZE[31013][/LOWERCASE][/CAPITALIZE]: [/COLOR]$INFO[Window(0).Property(MusicVideos.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(MusicVideos.UnWatched)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),music)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[133]:[/COLOR] $INFO[Window(0).Property(Music.ArtistsCount)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(Music.AlbumsCount)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(Music.SongsCount)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),vpl1) + !IsEmpty(Window(0).Property(PlaylistLastMovievpl1.1.Title))">$INFO[Window(0).Property(PlaylistLastMovievpl1.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(PlaylistLastMovievpl1.UnWatched)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),vpl1) + !IsEmpty(Window(0).Property(PlaylistLastEpisodevpl1.1.Title))">$INFO[Window(0).Property(PlaylistLastEpisodevpl1.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(PlaylistLastEpisodevpl1.UnWatched)]</value>
@@ -3248,7 +3248,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),apl18)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl18.Albums)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl18.Songs)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),apl19)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl19.Albums)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl19.Songs)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),apl20)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl20.Albums)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(PlaylistLastMusicapl20.Songs)]</value>	
-		<value condition="StringCompare(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name))">[COLOR=$VAR[value_headercolor]][LOWERCASE]$LOCALIZE[31249][/LOWERCASE]: [/COLOR]$INFO[Container(510).NumItems][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[20161]:[/COLOR] $INFO[Window(0).Property(Favourite.Count)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name))">[COLOR=$VAR[value_headercolor]][CAPITALIZE][LOWERCASE]$LOCALIZE[31249][/LOWERCASE][/CAPITALIZE]: [/COLOR]$INFO[Container(510).NumItems][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[20161]:[/COLOR] $INFO[Window(0).Property(Favourite.Count)]</value>
 	</variable>
 
 	<variable name="value_multilabel">
