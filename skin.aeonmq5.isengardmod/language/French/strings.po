@@ -4215,7 +4215,7 @@ msgctxt "#31992"
 msgid "Local subtitle available"
 msgstr "Sous-titres disponibles en local"
 
-msgctxt "#31997
+msgctxt "#31997"
 msgid "SEEKING"
 msgstr ""
 

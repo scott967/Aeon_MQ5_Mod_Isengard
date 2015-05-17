@@ -4240,7 +4240,7 @@ msgctxt "#31996"
 msgid "AVAILABLE[CR]GROUPS"
 msgstr ""
 
-msgctxt "#31997
+msgctxt "#31997"
 msgid "SEEKING"
 msgstr ""
 
