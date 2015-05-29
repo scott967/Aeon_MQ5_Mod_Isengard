@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.5 -->
+	<!-- Isengard 7.1.9 -->
 
 <includes>
 	<!--##################################################################################   VISTA PANEL - ID 62   ##################################################################################-->
@@ -37,7 +38,7 @@
 					<pagecontrol>80</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<visible>!Container.Content(years)</visible>
-					<itemlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
+					<itemlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons) | Container.Content(genres)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
 						<control type="image">
 							<posx>8</posx>
 							<posy>6</posy>
@@ -214,7 +215,7 @@
 							<height>120</height>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
+					<focusedlayout condition="Window.IsActive(25) + Skin.HasSetting(nopanelvideocase) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) | Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)] | Container.Content(tvshows) + !Skin.HasSetting(noviewpanelposter)  | Container.Content(seasons) | Container.Content(genres)" width="120" height="170"><!-- POSTER SEM ESTOJO -->
 						<control type="image">
 							<posx>8</posx>
 							<posy>6</posy>
