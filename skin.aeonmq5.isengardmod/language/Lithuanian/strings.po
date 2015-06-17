@@ -3958,7 +3958,7 @@ msgid "BOX BACK"
 msgstr "Atgal [COLOR=red]paketas/dėžutė/box[/COLOR]"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "Kartridžas"
 
 msgctxt "#31927"

@@ -3953,7 +3953,7 @@ msgid "BOX BACK"
 msgstr "OBAL DO POZADÍ"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "KAZETA"
 
 msgctxt "#31927"

@@ -3953,7 +3953,7 @@ msgid "BOX BACK"
 msgstr "ZADNJA STRANA OMOTA"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "ULOŽAK"
 
 msgctxt "#31927"

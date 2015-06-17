@@ -3952,7 +3952,7 @@ msgid "BOX BACK"
 msgstr "КУТИЯ ГРЪБ"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "КАСЕТА"
 
 msgctxt "#31927"

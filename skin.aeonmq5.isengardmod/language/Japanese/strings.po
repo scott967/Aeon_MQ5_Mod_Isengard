@@ -3953,7 +3953,7 @@ msgid "BOX BACK"
 msgstr "箱の裏"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "カートリッジ"
 
 msgctxt "#31927"

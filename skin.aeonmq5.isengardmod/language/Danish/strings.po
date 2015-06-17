@@ -3955,7 +3955,7 @@ msgid "BOX BACK"
 msgstr "BOKS BAGSIDE"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "FILMRULLE"
 
 msgctxt "#31927"

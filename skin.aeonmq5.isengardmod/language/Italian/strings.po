@@ -3955,7 +3955,7 @@ msgid "BOX BACK"
 msgstr "RETRO BOX"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "CARTUCCIA"
 
 msgctxt "#31927"

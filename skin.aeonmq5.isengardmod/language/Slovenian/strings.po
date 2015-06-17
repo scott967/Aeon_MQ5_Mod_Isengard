@@ -3952,7 +3952,7 @@ msgid "BOX BACK"
 msgstr "ZADNJA STRAN ŠKATLE"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "KARTUŠA"
 
 msgctxt "#31927"

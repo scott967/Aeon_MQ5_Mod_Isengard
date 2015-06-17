@@ -3964,7 +3964,7 @@ msgid "BOX BACK"
 msgstr "BOX RÜCKSEITE"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "FILMROLLE"
 
 msgctxt "#31927"

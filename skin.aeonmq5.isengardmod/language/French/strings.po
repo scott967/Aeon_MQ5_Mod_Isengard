@@ -3949,7 +3949,7 @@ msgid "BOX BACK"
 msgstr "DERRIÈRE BOÎTE"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "CARTOUCHE"
 
 msgctxt "#31927"

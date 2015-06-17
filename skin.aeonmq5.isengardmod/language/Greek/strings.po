@@ -3952,8 +3952,8 @@ msgid "BOX BACK"
 msgstr "ΟΠΙΣΘΙΟ ΕΞΩΦΥΛΛΟ"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
-msgstr "CARTDRIGE"
+msgid "CARTRIDGE"
+msgstr "CARTRIDGE"
 
 msgctxt "#31927"
 msgid "SCREENSHOT"

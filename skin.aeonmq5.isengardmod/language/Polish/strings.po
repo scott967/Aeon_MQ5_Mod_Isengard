@@ -3956,7 +3956,7 @@ msgid "BOX BACK"
 msgstr "TYŁ PUDEŁKA"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "KARTRIDŻ"
 
 msgctxt "#31927"

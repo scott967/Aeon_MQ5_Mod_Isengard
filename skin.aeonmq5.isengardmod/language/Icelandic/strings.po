@@ -3952,7 +3952,7 @@ msgid "BOX BACK"
 msgstr "BOX AFTANVERÐU"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "HYLKI"
 
 msgctxt "#31927"

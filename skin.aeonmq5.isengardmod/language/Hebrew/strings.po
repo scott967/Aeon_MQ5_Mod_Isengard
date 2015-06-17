@@ -3954,7 +3954,7 @@ msgid "BOX BACK"
 msgstr "אריזה אחורית"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "מחסנית"
 
 msgctxt "#31927"

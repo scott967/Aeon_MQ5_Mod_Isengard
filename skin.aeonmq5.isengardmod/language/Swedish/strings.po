@@ -3955,7 +3955,7 @@ msgid "BOX BACK"
 msgstr "BAKSIDA FODRAL"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "KASSETT"
 
 msgctxt "#31927"

@@ -3958,7 +3958,7 @@ msgid "BOX BACK"
 msgstr "PARTE TRASERA DE LA CAJA"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "CARTUCHO"
 
 msgctxt "#31927"

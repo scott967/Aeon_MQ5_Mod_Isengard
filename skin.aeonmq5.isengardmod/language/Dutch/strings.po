@@ -3956,7 +3956,7 @@ msgid "BOX BACK"
 msgstr "DOOSJE ACHTERKANT"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "CARTRIDGE"
 
 msgctxt "#31927"

@@ -3951,7 +3951,7 @@ msgid "BOX BACK"
 msgstr "बॉक्स पृष्ठ"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "कार्ट्रिज"
 
 msgctxt "#31927"

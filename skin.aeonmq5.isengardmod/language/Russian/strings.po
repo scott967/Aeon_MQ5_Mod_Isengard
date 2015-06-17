@@ -3960,7 +3960,7 @@ msgid "BOX BACK"
 msgstr "ЗАД КОРОБКИ"
 
 msgctxt "#31926"
-msgid "CARTDRIGE"
+msgid "CARTRIDGE"
 msgstr "КАРТРИДЖ"
 
 msgctxt "#31927"
