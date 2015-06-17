@@ -1,3 +1,9 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.10 - RELEASE DATE 06/20/2015[/COLOR][/B]
+Added:  Music case view now avalable in wall view
+Fixed:  Corrected labels for Rom Collection Browser
+Fixed:  Incorrect art in low list view
+Fixed:  Shelfcase view did not wrap properly
+
 [B][COLOR=FFFF8C00]BUILD 7.1.9 - RELEASE DATE 05/25/2015[/COLOR][/B]
 Added:  New video view "shelfcase"
 Fixed:  During video playback, SEEKING setting will only display during active Seek
@@ -15,14 +21,14 @@ Fixed:  It is now possible to set episode bookmarks for tv shows with multiple e
 [B][COLOR=FFFF8C00]BUILD 7.1.7 - INITIAL RELEASE FOR ISENGARD DATE 03/05/2015[/COLOR][/B]
 
 Added:  Live TV EPG is now available to be added to the main menu via customize main menu
-Added:  Weather widgets and MyWeather now supports Yahoo! Weather  (current, 36 hour views)
+Added:  Weather widgets and MyWeather now support Yahoo! Weather  (current, 36 hour views)
 Added:  CoverFlow view now available for program addons
 Improved:  Addon TV.Show.Next.Aired widgets now work for live TV main menu
-Improved:  Addon TV.Show.Next.Aired now requries ver 6.0.10 (minimum) and no longer is run at skin startup
+Improved:  Addon TV.Show.Next.Aired now requires ver 6.0.10 (minimum) and no longer is run at skin startup
 Improved:  In the music m3u playlist editor dialog, button label has been changed from "CLOSE" to "CLEAN" (when this button is clicked, the list of playlist music files is cleared)
 Fixed:  Recording Preferences dialog window focus issues when PVR client is pvr.npvr (Next PVR)
 Fixed:  Adjusted positions of main menu items so the focused item (wraplist) is centered
-Improved:  On home window, when library status bar is displayed for movies, concerts, and favoristes the label "Movies", "concerts", or "widgets" is displayed as appropriate
+Improved:  On home window, when library status bar is displayed for movies, concerts, and favorites the label "Movies", "concerts", or "widgets" is displayed as appropriate
 
 
 [B][COLOR=FFFF8C00]BUILD 6.1.6 - RELEASE DATE 02/09/2015[/COLOR][/B]
