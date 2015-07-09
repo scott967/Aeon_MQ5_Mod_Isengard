@@ -3,7 +3,7 @@
 This is a MOD of Aeon MQ5 ver 2.0.2 for use in Kodi Helix/ver14
 All original authorship remains with Marcos Qui.
 Helix MOD uses the Helix updates provided by Kodi from users "Orby" and "lizard".
-Update 6.1.2
+Update 7.1.10
 
 Install:
 unzip the folder service.skin.widgets and skin.aeonmq5.helixmod.zip to a
