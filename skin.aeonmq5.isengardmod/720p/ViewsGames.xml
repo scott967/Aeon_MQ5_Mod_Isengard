@@ -478,12 +478,12 @@
 		<onleft>51</onleft>
 		<onright>51</onright>
 		<onup>9900</onup>
-		<ondown>80</ondown>
+		<ondown>62</ondown>
 		<orientation>horizontal</orientation>
 		<focusposition>2</focusposition>
 		<scrolltime>400</scrolltime>
 		<preloaditems>2</preloaditems>
-		<pagecontrol>80</pagecontrol>
+		<pagecontrol>62</pagecontrol>
 		<itemlayout width="298" height="360">
 			<control type="image">
 				<posx>0</posx>
@@ -600,7 +600,7 @@
 			</control>
 			<include condition="Skin.HasSetting(postergamesfixedlist)">PosterGamesFixedList</include>
 			<include condition="!Skin.HasSetting(postergamesfixedlist)">PosterGamesWrapList</include>
-			<control type="scrollbar" id="80">
+			<control type="scrollbar" id="62">
 				<include>ScrollBar_Horizontal</include>
 				<posx>190</posx>
 				<posy>480</posy>
@@ -608,7 +608,7 @@
 				<onup>51</onup>
 				<ondown>9920</ondown>
 				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(80)</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(62)</visible>
 			</control>
 		</control>
 	</include>
@@ -635,8 +635,8 @@
 					<onup>9900</onup>
 					<ondown>9920</ondown>
 					<onleft>9900</onleft>
-					<onright>80</onright>
-					<pagecontrol>80</pagecontrol>
+					<onright>62</onright>
+					<pagecontrol>62</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="120" height="170">
 						<control type="image">
@@ -752,7 +752,7 @@
 				</control>
 			</control>
 			<!-- Scroll Bar -->
-			<control type="scrollbar" id="80">
+			<control type="scrollbar" id="62">
 				<include>ScrollBar_Vertical</include>
 				<posx>1230</posx>
 				<posy>111</posy>
@@ -760,7 +760,7 @@
 				<onleft>52</onleft>
 				<onright>52</onright>
 				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(80)</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(62)</visible>
 			</control>
 		</control>
 	</include>
