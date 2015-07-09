@@ -1,7 +1,8 @@
-	<!-- Aeon MQ 5 Isengard 7.1.9 -->
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- Aeon MQ 5 Isengard 7.1.9/7.1.10 -->
 
 <window id="122">
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -72,11 +73,11 @@
 				<posy>100</posy>
 				<height>600</height>
 				<onleft>Dialog.Close(122)</onleft>
-				<onright>2</onright>
+				<onright>5</onright>
 				<ondown>80</ondown>
 				<onup>80</onup>
 			</control>
-			<control type="list" id="2">
+			<control type="list" id="5">
 				<posx>140</posx>
 				<posy>100</posy>
 				<width>1000</width>
@@ -84,8 +85,8 @@
 				<itemgap>0</itemgap>
 				<onleft>80</onleft>
 				<onright>Dialog.Close(122)</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
+				<onup>5</onup>
+				<ondown>5</ondown>
 				<pagecontrol>80</pagecontrol>
 				<scrolltime>450</scrolltime>
 				<itemlayout height="30">
