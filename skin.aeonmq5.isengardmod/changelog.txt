@@ -1,8 +1,9 @@
-[B][COLOR=FFFF8C00]BUILD 7.1.10 - RELEASE DATE 06/20/2015[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 7.1.10 - RELEASE DATE 07/15/2015[/COLOR][/B]
 Added:  Music case view now avalable in wall view
 Fixed:  Corrected labels for Rom Collection Browser
 Fixed:  Incorrect art in low list view
 Fixed:  Shelfcase view did not wrap properly
+Added:  PVR info shows when opening CodecInfo in FullScreenVideo and Live TV is playing
 
 [B][COLOR=FFFF8C00]BUILD 7.1.9 - RELEASE DATE 05/25/2015[/COLOR][/B]
 Added:  New video view "shelfcase"
