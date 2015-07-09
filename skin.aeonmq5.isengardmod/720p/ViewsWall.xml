@@ -1,5 +1,6 @@
-	<!-- Aeon MQ 5 Helix 6.1.6 -->
-
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- Aeon MQ 5 Helix 6.1.6 /6.1.9 wall audiocase -->
+	<!-- Isengard 7.1.10 -->
 <includes>
 	<!--##################################################################################   VISTA WALL - ID 56   ##################################################################################-->
 	<include name="Wall_Dimmer">
@@ -892,7 +893,7 @@
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
 				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -903,7 +904,27 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>103</width>
+						<height>103</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>5</posy>
+						<width>84</width>
+						<height>95</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+				</itemlayout>
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -914,7 +935,27 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>175</width>
+						<height>175</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>27</posx>
+						<posy>6</posy>
+						<width>144</width>
+						<height>163</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+				</itemlayout>
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -925,7 +966,27 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="SubString(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>272</width>
+						<height>272</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>39</posx>
+						<posy>8</posy>
+						<width>223</width>
+						<height>253</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -940,7 +1001,35 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>103</width>
+						<height>103</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>5</posy>
+						<width>84</width>
+						<height>95</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+				</focusedlayout>
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -955,7 +1044,35 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>175</width>
+						<height>175</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>27</posx>
+						<posy>6</posy>
+						<width>144</width>
+						<height>163</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+				</focusedlayout>
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -970,7 +1087,35 @@
 						</animation>
 					</control>
 				</focusedlayout>
-			</control>
+				<focusedlayout condition="SubString(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>272</width>
+						<height>272</height>
+						<texture>thumb_box_cd.png</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>39</posx>
+						<posy>8</posy>
+						<width>223</width>
+						<height>253</height>
+						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<!-- <bordertexture border="-2">black.png</bordertexture> -->
+						<aspectratio align="center">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+					</control>
+				</focusedlayout>
+				</control>
 		</control>
 	</include>
 	<include name="ViewWallPrograms">
