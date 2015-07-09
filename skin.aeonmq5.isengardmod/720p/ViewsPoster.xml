@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 	<!-- Aeon MQ 5 Helix 6.1.6 -->
+	<!-- Isengard 7.1.10 -->
 
 <includes>
 	<!--##################################################################################   VISTA POSTER - ID 54   #############################################################################-->
@@ -41,7 +43,7 @@
 		<pagecontrol>80</pagecontrol>
 		<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(621)">Conditional</animation>
 		<visible>!Container.Content(years)</visible>
-		<itemlayout width="298" height="360">
+		<itemlayout condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]" width="298" height="360">
 			<control type="image">
 				<posx>0</posx>
 				<posy>6</posy>
@@ -72,7 +74,38 @@
 				<visible>[!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</itemlayout>
-		<focusedlayout width="298" height="360">
+		<itemlayout condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)" width="298" height="360">
+			<control type="image">
+				<posx>0</posx>
+				<posy>6</posy>
+				<width>260</width>
+				<height>350</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="-2">black.png</bordertexture>
+				<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>315</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>$VAR[value_watchedstyle]</texture>
+				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + StringCompare(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+			</control>
+			<control type="image">
+				<posx>211</posx>
+				<posy>319</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture flipy="true">$VAR[value_watchedstyle]</texture>
+				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<visible>[!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]" width="298" height="360">
 			<control type="image">
 				<posx>0</posx>
 				<posy>6</posy>
@@ -80,6 +113,42 @@
 				<height>350</height>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+				<bordertexture border="-2">black.png</bordertexture>
+				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>315</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>$VAR[value_watchedstyle]</texture>
+				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
+				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
+				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + StringCompare(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+			</control>
+			<control type="image">
+				<posx>211</posx>
+				<posy>319</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture flipy="true">$VAR[value_watchedstyle]</texture>
+				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
+				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
+				<visible>[!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+			</control>	
+		</focusedlayout>
+		<focusedlayout condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)" width="298" height="360">
+			<control type="image">
+				<posx>0</posx>
+				<posy>6</posy>
+				<width>260</width>
+				<height>350</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
 			</control>
