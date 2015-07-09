@@ -1,6 +1,6 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.4/6.1.5 -->
-	<!-- Isengard 7.1.9 ShelfCase -->
-
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.4/6.1.5/6.1.9 Shelfcase Mod -->
+	<!-- Isengard 7.1.9 Shelfcase/7.1.10 -->
 <includes>
 	<include file="Defaults.xml"/>
 	<include file="IncludesVariables.xml"/>
@@ -1820,6 +1820,18 @@
 		<pulseonselect>false</pulseonselect>
 		<colordiffuse>F9FFFFFF</colordiffuse>
 	</include>
+	<include name="DialogTextBox">
+		<posx>770</posx>
+		<posy>2</posy>
+		<width>500</width>
+		<height>60</height>
+		<align>right</align>
+		<textcolor>FFFFFAF0</textcolor>
+		<font>Font_17</font>
+		<textcolor>FFFFFAF0</textcolor>
+		<scroll>true</scroll>
+	</include>
+		
 
 	<!-- #########################################################################  Menu Virtual ######################################################################### -->
 	<include name="VirtualMenuBar">
