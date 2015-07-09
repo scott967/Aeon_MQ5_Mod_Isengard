@@ -421,7 +421,7 @@ msgstr "CẢM GIÁC RẠP CHIẾU BÓNG"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "HƯỚNG DẪN TV"
+msgstr "HƯỚNG DẪN NEXT AIRED"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"

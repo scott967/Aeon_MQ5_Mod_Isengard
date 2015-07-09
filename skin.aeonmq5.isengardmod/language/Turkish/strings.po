@@ -421,7 +421,7 @@ msgstr "SİNEMA EX"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "TV REHBERI"
+msgstr "NEXT AIRED REHBERI"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"

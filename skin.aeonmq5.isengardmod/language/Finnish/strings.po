@@ -419,7 +419,7 @@ msgstr "ELOKUVAKOKEMUS"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "TV-OPAS"
+msgstr "NEXT AIRED-OPAS"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"

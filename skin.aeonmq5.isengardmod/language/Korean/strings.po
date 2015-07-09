@@ -420,7 +420,7 @@ msgstr "CINEMA EX"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "TV 가이드"
+msgstr "NEXT AIRED 가이드"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"

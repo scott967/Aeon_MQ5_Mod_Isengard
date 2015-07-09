@@ -422,7 +422,7 @@ msgstr "CINEMA EX"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "GUIDA TV"
+msgstr "GUIDA NEXT AIRED"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"

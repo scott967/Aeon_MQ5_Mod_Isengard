@@ -427,7 +427,7 @@ msgstr "CINEMA EX"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
-msgstr "ТВ ПРОГРАММА"
+msgstr "NEXT AIRED ПРОГРАММА"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"
