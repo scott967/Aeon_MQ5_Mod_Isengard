@@ -2418,7 +2418,7 @@
 			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 		</control>
 		<control type="radiobutton" id="98"><!-- Adv Filter -->
-			<include>TopMenuButton</include>
+			<include>TopMenuRadioButton</include>
 			<label>587</label>
 			<onclick>SetFocus(50)</onclick>
 			<onclick>Filter</onclick>

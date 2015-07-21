@@ -4,7 +4,7 @@ Fixed:  Corrected labels for Rom Collection Browser
 Fixed:  Incorrect art in low list view
 Fixed:  Shelfcase view did not wrap properly
 Added:  PVR info shows when opening CodecInfo in FullScreenVideo and Live TV is playing
-
+Fixed:  Advance Filter (top menu) now is a radio button (ON=filter active) 
 [B][COLOR=FFFF8C00]BUILD 7.1.9 - RELEASE DATE 05/25/2015[/COLOR][/B]
 Added:  New video view "shelfcase"
 Fixed:  During video playback, SEEKING setting will only display during active Seek
@@ -103,7 +103,7 @@ Added:  Timer series recording editing and delete (wmc.pvr feature)
 Improved:  English (US) translations
 Improved:  Concerts (music video) info displays
 Improved:  New default fonts with support for CJK characters
-Improved:  New font set optoins for large and huge fonts
+Improved:  New font set options for large and huge fonts
 
 [B][COLOR=FFFF8C00]BUILD 2.0.2 - RELEASE DATE 2/7/2014[/COLOR][/B]
 
