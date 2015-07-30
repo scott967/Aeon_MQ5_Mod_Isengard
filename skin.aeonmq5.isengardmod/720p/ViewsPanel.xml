@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 	<!-- Aeon MQ 5 Helix 6.1.5 -->
-	<!-- Isengard 7.1.9/7.1.10 -->
+	<!-- Isengard 7.1.9/7.1.10/7.1.11 -->
 
 <includes>
 	<!--##################################################################################   VISTA PANEL - ID 62   ##################################################################################-->
@@ -257,7 +257,7 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
-							<posx>81</posx>
+							<posx>156</posx>
 							<posy>5</posy>
 							<width>25</width>
 							<height>25</height>
