@@ -1,4 +1,4 @@
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  -->
+	<!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
@@ -1736,6 +1736,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.1.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.1.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.1.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">inprogress</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.1.Play)]</onclick>
 						<visible>![IsEmpty(Window(0).Property(RecommendedMusicVideo.1.Title)) | Skin.HasSetting(noprogresswidget)]</visible>
@@ -1930,6 +1931,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.1.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.1.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.1.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">inprogress</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.1.Play)]</onclick>
 						<visible>![IsEmpty(Window(0).Property(RecommendedMusicVideo.1.Title)) | Skin.HasSetting(noprogresswidget)]</visible>
@@ -2124,6 +2126,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.1.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.1.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.1.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.1.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.1.Title))</visible>
@@ -2139,6 +2142,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.2.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.2.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.2.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.2.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.2.Title))</visible>
@@ -2154,6 +2158,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.3.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.3.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.3.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.3.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.3.Title))</visible>
@@ -2169,6 +2174,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.4.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.4.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.4.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.4.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.4.Title))</visible>
@@ -2184,6 +2190,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.5.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.5.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.5.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.5.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.5.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
@@ -2199,6 +2206,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.6.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.6.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.6.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.6.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.6.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
@@ -2214,6 +2222,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.7.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.7.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.7.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.7.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.7.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
@@ -2229,6 +2238,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.8.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.8.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.8.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.8.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.8.Title)) + [SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)]</visible>
@@ -2244,6 +2254,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.9.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.9.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.9.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.9.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.9.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
@@ -2259,6 +2270,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.10.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.10.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.10.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.10.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.10.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
@@ -2274,6 +2286,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.11.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.11.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.11.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.11.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.11.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
@@ -2289,6 +2302,7 @@
 						<property name="Year">$INFO[Window(0).Property(RecommendedMusicVideo.12.Year)]</property>
 						<property name="File">$INFO[Window(0).Property(RecommendedMusicVideo.12.File)]</property>
 						<property name="Codec">$INFO[Window(0).Property(RecommendedMusicVideo.12.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(0).Property(RecommendedMovie.1.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfconcerts_list)]</property>
 						<onclick>$INFO[Window(0).Property(RecommendedMusicVideo.12.Play)]</onclick>
 						<visible>!IsEmpty(Window(0).Property(RecommendedMusicVideo.12.Title)) + SubString(skin.string(widgetsnumber),12)</visible>
