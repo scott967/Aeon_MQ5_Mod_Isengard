@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.4/6.1.5/6.1.9 Shelfcase Mod -->
-	<!-- Isengard 7.1.9 Shelfcase/7.1.10 -->
+	<!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList -->
 <includes>
 	<include file="Defaults.xml"/>
 	<include file="IncludesVariables.xml"/>
@@ -32,6 +32,7 @@
 	<include file="ViewsShowCase.xml"/><!-- 66 -->
 	<include file="Views3DWall.xml"/><!-- 67 -->
 	<include file="ViewsPhotoShow.xml"/><!-- 79 -->
+	<include file="ViewsMidList.xml"/><!-- 70 -->
 	<include file="ViewsGames.xml"/>
 	<include file="ViewsLiveTV.xml"/>
 	<constant name="FanartCrossFadeTime">350</constant>
@@ -1508,7 +1509,7 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+			<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible>
 		</control>
 		<control type="label">
 			<posx>40</posx>
@@ -1520,6 +1521,7 @@
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
+			<visible>!Control.IsVisible(70)</visible>
 		</control>
 		<control type="image"><!-- Legenda -->
 			<posx>0</posx>
@@ -1531,7 +1533,7 @@
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
-			<visible>!IsEmpty(Window(2003).Property(SubtitleLanguage.1))</visible>
+			<visible>!IsEmpty(Window(2003).Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible>
 		</control>
 		<control type="label">
 			<posx>40</posx>
@@ -1544,6 +1546,7 @@
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
+			<visible>!Control.IsVisible(70)</visible>
 		</control>
 	</include>	
 

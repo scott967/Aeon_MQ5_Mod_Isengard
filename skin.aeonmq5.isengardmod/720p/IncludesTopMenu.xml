@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.2/6.1.3 /6.1.4/6.1.5/6.1.6/6.1.8/6.1.9 wall audiocover-->
-	<!-- Isengard 7.1.10 wall audiocover/7.1.11 -->
+<!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.2/6.1.3 /6.1.4/6.1.5/6.1.6/6.1.8/6.1.9 wall audiocover-->
+<!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>21</posy>
@@ -38,7 +38,7 @@
 		<include>Animation_Fade</include>
 		<colordiffuse>FFFFFAF0</colordiffuse>
 	</include>
-	
+
 	<include name="TopMenuRadioButton">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -215,9 +215,9 @@
 			</control>
 		</control>
 	</include>
-			
+
 	<!-- ****************************************************************************** -->
-	
+
 	<include name="ViewNameEPG">
 		<control type="group">
 			<top>-300</top>
@@ -605,50 +605,52 @@
 					<visible>Control.IsVisible(54)</visible>
 				</control>
 
-				<!-- Low List -->
-				<control type="radiobutton" id="9225">
+				<!-- Mid List -->
+				<control type="radiobutton" id="92120">
 					<include>TopMenuRadioButton</include>
 					<label>31486</label>
-					<onclick>Skin.ToggleSetting(nolowlistvideocase)</onclick>
-					<selected>!Skin.HasSetting(nolowlistvideocase)</selected>
-					<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<onclick>Skin.ToggleSetting(nomidlistvideocase)</onclick>
+					<selected>!Skin.HasSetting(nomidlistvideocase)</selected>
+					<visible>Control.IsVisible(70) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
-				<control type="button" id="9226">
+				<control type="button" id="92121">
 					<include>TopMenuButton</include>
 					<label> - $LOCALIZE[31298]</label>
-					<onclick>SetFocus(55)</onclick>
+					<onclick>SetFocus(70)</onclick>
 					<onclick>Skin.SetString(customwindow,video)</onclick>
 					<onclick>ActivateWindowAndFocus(SkinSettings, 9100,3 ,403,0)</onclick>
-					<visible>!Skin.HasSetting(nolowlistvideocase) + Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>!Skin.HasSetting(nomidlistvideocase) + Control.IsVisible(70) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
-				<control type="radiobutton" id="9227">
+				<control type="radiobutton" id="92122">
 					<include>TopMenuRadioButton</include>
 					<label>31111</label>
-					<onclick>Skin.ToggleSetting(nolowlistdiscart)</onclick>
-					<selected>!Skin.HasSetting(nolowlistdiscart)</selected>
-					<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<onclick>Skin.ToggleSetting(nomidlistdiscart)</onclick>
+					<selected>!Skin.HasSetting(nomidlistdiscart)</selected>
+					<visible>Control.IsVisible(70) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
-				<control type="radiobutton" id="9228">
+				<control type="radiobutton" id="92123">
 					<include>TopMenuRadioButton</include>
 					<label>31112</label>
-					<onclick>Skin.ToggleSetting(lowlistplotvideo)</onclick>
-					<selected>Skin.HasSetting(lowlistplotvideo)</selected>
-					<visible>Control.IsVisible(55)</visible>
+					<onclick>Skin.ToggleSetting(midlistplotvideo)</onclick>
+					<selected>Skin.HasSetting(midlistplotvideo)</selected>
+					<visible>Control.IsVisible(70)</visible>
 				</control>
-				<control type="radiobutton" id="9229">
+				<control type="radiobutton" id="92124">
 					<include>TopMenuRadioButton</include>
 					<label>31490</label>
-					<onclick>Skin.ToggleSetting(slimlowlistvideo)</onclick>
-					<selected>Skin.HasSetting(slimlowlistvideo)</selected>
-					<visible>Control.IsVisible(55)</visible>
+					<onclick>Skin.ToggleSetting(slimmidlistvideo)</onclick>
+					<selected>Skin.HasSetting(slimmidlistvideo)</selected>
+					<visible>Control.IsVisible(70)</visible>
 				</control>
-				<control type="radiobutton" id="9230">
+				<control type="radiobutton" id="92125">
 					<include>TopMenuRadioButton</include>
 					<label>31508</label>
-					<onclick>Skin.ToggleSetting(noartlowlistvideo)</onclick>
-					<selected>!Skin.HasSetting(noartlowlistvideo)</selected>
-					<visible>Control.IsVisible(55)</visible>
+					<onclick>Skin.ToggleSetting(noartmidlistvideo)</onclick>
+					<selected>!Skin.HasSetting(noartmidlistvideo)</selected>
+					<visible>Control.IsVisible(70)</visible>
 				</control>
+
+
 
 				<!-- Wall -->
 				<control type="radiobutton" id="9235">
@@ -1859,6 +1861,29 @@
 					<onclick>Skin.ToggleSetting(slimlowlistmusic)</onclick>
 					<selected>Skin.HasSetting(slimlowlistmusic)</selected>
 					<visible>Control.IsVisible(55)</visible>
+				</control>
+
+				<!-- Mid List -->
+				<control type="radiobutton" id="9250">
+					<include>TopMenuRadioButton</include>
+					<label>31486</label>
+					<onclick>Skin.ToggleSetting(nomidlistaudiocase)</onclick>
+					<selected>!Skin.HasSetting(nomidlistaudiocase)</selected>
+					<visible>Control.IsVisible(70)</visible>
+				</control>	
+				<control type="radiobutton" id="9251">
+					<include>TopMenuRadioButton</include>
+					<label>31113</label>
+					<onclick>Skin.ToggleSetting(midlistplotaudio)</onclick>
+					<selected>Skin.HasSetting(midlistplotaudio)</selected>
+					<visible>Control.IsVisible(70)</visible>
+				</control>
+				<control type="radiobutton" id="9252">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimmidlistmusic)</onclick>
+					<selected>Skin.HasSetting(slimmidlistmusic)</selected>
+					<visible>Control.IsVisible(70)</visible>
 				</control>
 
 				<!-- Wall -->
@@ -3846,7 +3871,7 @@
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
 			</control>
-			
+
 			<control type="grouplist" id="9301"><!-- TV Channels -->
 				<animation effect="slide" start="0,0" end="0,450" time="600" tween="sine" easing="inout" condition="Control.HasFocus(32) | ControlGroup(9301).HasFocus">Conditional</animation>
 				<posx>641</posx>

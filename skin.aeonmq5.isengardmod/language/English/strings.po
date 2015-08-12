@@ -2026,6 +2026,10 @@ msgctxt "#31447"
 msgid "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
 msgstr "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
 
+msgctxt "#31448"
+msgid "MID LIST"
+msgstr "MID LIST"
+
 msgctxt "#31449"
 msgid "SOLO MODE"
 msgstr "SOLO MODE"

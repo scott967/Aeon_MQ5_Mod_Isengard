@@ -2040,6 +2040,10 @@ msgctxt "#31447"
 msgid "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
 msgstr "ZEIGE BUTTON UM DAS SKIN ZURÜCKZUSETZEN (TEMPORÄR)"
 
+msgctxt "#31448"
+msgid "MID LIST"
+msgstr "MID LIST"
+
 msgctxt "#31449"
 msgid "SOLO MODE"
 msgstr "SOLO MODUS"

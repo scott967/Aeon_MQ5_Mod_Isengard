@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.3 -->
-	<!-- Isengard 7.1.9 ShelfCase -->
+	<!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 
 <window id="641" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
@@ -187,6 +188,13 @@
 					<onclick>Skin.ToggleSetting(viewshelfcase_video)</onclick>
 					<selected>Skin.HasSetting(viewshelfcase_video)</selected>
 					<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19270"><!-- MidList Mod --><!-- 70 -->
+					<radioposx>894</radioposx>
+					<label>31448</label>
+					<onclick>Skin.ToggleSetting(viewmidlist_video)</onclick>
+					<selected>Skin.HasSetting(viewmidlist_video)</selected>
+					<!-- <visible>![Container.Content(episodes) | Container.Content(years)]</visible> -->
 				</control>
 			</control>
 		</control>

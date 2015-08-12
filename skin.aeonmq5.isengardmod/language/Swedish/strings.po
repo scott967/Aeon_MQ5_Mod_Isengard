@@ -2031,6 +2031,10 @@ msgctxt "#31447"
 msgid "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
 msgstr "VISA KNAPPEN FÖR ATT ÅTERSTÄLLA SKIN (TEMPORÄRT)"
 
+msgctxt "#31448"
+msgid "MID LIST"
+msgstr "MID LIST"
+
 msgctxt "#31449"
 msgid "SOLO MODE"
 msgstr "SOLO LÄGE"
