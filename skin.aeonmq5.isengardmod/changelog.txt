@@ -2,6 +2,7 @@
 Added:  Support for Hungarian language charaters in all caps font
 Fixed:  Advanced Filter radio button in top menu
 Fixed:  Subtitles - manual search button
+Added:  Mid List viewmode for video and audio
 
 [B][COLOR=FFFF8C00]BUILD 7.1.10 - RELEASE DATE 07/15/2015[/COLOR][/B]
 Added:  Music case view now avalable in wall view
