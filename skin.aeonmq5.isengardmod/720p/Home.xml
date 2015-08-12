@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2 /6.1.3/6.1.8 -->
+	<!-- Isengard 7.1.11 -->
 
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -1130,9 +1131,9 @@
 				</control>
 				<control type="grouplist"><!-- Contador da reproducao -->
 					<posx>0</posx>
-					<posy>545</posy>
+					<posy>535</posy>
 					<width>1280</width>
-					<height>60</height>
+					<height>65</height>
 					<itemgap>0</itemgap>
 					<control type="label">
 						<include condition="StringCompare(skin.string(font),font1)">Font1</include>
