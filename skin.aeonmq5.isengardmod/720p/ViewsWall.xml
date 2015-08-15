@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.6 /6.1.9 wall audiocase -->
-	<!-- Isengard 7.1.10 -->
+	<!-- Isengard 7.1.10/7.1.11 -->
 <includes>
 	<!--##################################################################################   VISTA WALL - ID 56   ##################################################################################-->
 	<include name="Wall_Dimmer">
@@ -429,7 +429,7 @@
 							<effect type="slide" start="0,0" end="-37,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25)</visible>
+						<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25)</visible>
 						<control type="image">
 							<posx>37</posx>
 							<posy>12</posy>
@@ -440,6 +440,19 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
+							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+						</control>
+						<control type="image">
+							<posx>37</posx>
+							<posy>12</posy>
+							<width>150</width>
+							<height>150</height>
+							<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<fadetime>FanartCrossFadeTime</fadetime>
+							<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+							<include>Animation_ViewsCDart</include>
+							<visible>IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 					</control>
 					<control type="image">

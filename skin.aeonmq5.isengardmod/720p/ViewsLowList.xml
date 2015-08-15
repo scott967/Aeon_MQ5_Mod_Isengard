@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!-- Aeon MQ 5 Helix 6.1.0  -->
-<!-- Isengard 7.1.10 -->
+<!-- Isengard 7.1.10/7.1.11 -->
 
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
@@ -447,7 +447,7 @@
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="!Skin.HasSetting(nolowlistvideocase)">Conditional</animation>
-					<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nolowlistdiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
+					<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | Skin.HasSetting(nolowlistdiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<posx>112</posx>
 						<posy>70</posy>
@@ -458,6 +458,20 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
+						<visible>!IsEmpty(ListItem.Art(discart))</visible>
+					</control>
+					<control type="image">
+						<description>THIS IS WHERE YOU CHANGE DISC SIZE AND POSITION</description>
+						<posx>112</posx>
+						<posy>70</posy>
+						<width>250</width>
+						<height>250</height>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+						<visible>IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 				</control>
 

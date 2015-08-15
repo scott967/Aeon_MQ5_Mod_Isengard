@@ -1,4 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.2 -->
+	<!-- Isengardmod 7.1.11 -->
 
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
@@ -355,7 +356,8 @@
 							<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
+						<!-- <visible>![IsEmpty(ListItem.Art(discart)) | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible> -->
+						<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
 						<control type="image">
 							<posx>270</posx>
 							<posy>50</posy>
@@ -366,6 +368,19 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
+							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+						</control>
+						<control type="image">
+							<posx>270</posx>
+							<posy>50</posy>
+							<width>250</width>
+							<height>250</height>
+							<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<fadetime>FanartCrossFadeTime</fadetime>
+							<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+							<include>Animation_ViewsCDart</include>
+							<visible>IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 					</control>
 
