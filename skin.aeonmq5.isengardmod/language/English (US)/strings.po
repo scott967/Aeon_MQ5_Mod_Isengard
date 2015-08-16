@@ -1719,8 +1719,8 @@ msgid "General settings"
 msgstr "General settings"
 
 msgctxt "#31376"
-msgid "A HIGH DEFINITION MEDIA ENVIROMENT"
-msgstr "A HIGH DEFINITION MEDIA ENVIROMENT"
+msgid "A HIGH DEFINITION MEDIA ENVIRONMENT"
+msgstr "A HIGH DEFINITION MEDIA ENVIRONMENT"
 
 msgctxt "#31377"
 msgid ""
@@ -2610,7 +2610,7 @@ msgstr "MOVE LEFT/RIGHT TO BROWSE"
 
 msgctxt "#31594"
 msgid "CHOOSE A STYLE TO MAIN MENU"
-msgstr "CHOOSE A STYLE TO MAIN MENU"
+msgstr "CHOOSE A STYLE FOR MAIN MENU"
 
 msgctxt "#31595"
 msgid "CHOOSE A COLOR FOR THE PANELS"
