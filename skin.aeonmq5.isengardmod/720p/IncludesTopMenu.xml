@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.1/6.1.2/6.1.3 /6.1.4/6.1.5/6.1.6/6.1.8/6.1.9 wall audiocover-->
-<!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod -->
+<!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>21</posy>
@@ -603,6 +603,51 @@
 					<onclick>Skin.ToggleSetting(noartpostervideo)</onclick>
 					<selected>!Skin.HasSetting(noartpostervideo)</selected>
 					<visible>Control.IsVisible(54)</visible>
+				</control>
+				
+				<!-- Low List -->
+				<control type="radiobutton" id="9225">
+					<include>TopMenuRadioButton</include>
+					<label>31486</label>
+					<onclick>Skin.ToggleSetting(nolowlistvideocase)</onclick>
+					<selected>!Skin.HasSetting(nolowlistvideocase)</selected>
+					<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+				</control>
+				<control type="button" id="9226">
+					<include>TopMenuButton</include>
+					<label> - $LOCALIZE[31298]</label>
+					<onclick>SetFocus(55)</onclick>
+					<onclick>Skin.SetString(customwindow,video)</onclick>
+					<onclick>ActivateWindowAndFocus(SkinSettings, 9100,3 ,403,0)</onclick>
+					<visible>!Skin.HasSetting(nolowlistvideocase) + Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+				</control>
+				<control type="radiobutton" id="9227">
+					<include>TopMenuRadioButton</include>
+					<label>31111</label>
+					<onclick>Skin.ToggleSetting(nolowlistdiscart)</onclick>
+					<selected>!Skin.HasSetting(nolowlistdiscart)</selected>
+					<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+				</control>
+				<control type="radiobutton" id="9228">
+					<include>TopMenuRadioButton</include>
+					<label>31112</label>
+					<onclick>Skin.ToggleSetting(lowlistplotvideo)</onclick>
+					<selected>Skin.HasSetting(lowlistplotvideo)</selected>
+					<visible>Control.IsVisible(55)</visible>
+				</control>
+				<control type="radiobutton" id="9229">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimlowlistvideo)</onclick>
+					<selected>Skin.HasSetting(slimlowlistvideo)</selected>
+					<visible>Control.IsVisible(55)</visible>
+				</control>
+				<control type="radiobutton" id="9230">
+					<include>TopMenuRadioButton</include>
+					<label>31508</label>
+					<onclick>Skin.ToggleSetting(noartlowlistvideo)</onclick>
+					<selected>!Skin.HasSetting(noartlowlistvideo)</selected>
+					<visible>Control.IsVisible(55)</visible>
 				</control>
 
 				<!-- Mid List -->
