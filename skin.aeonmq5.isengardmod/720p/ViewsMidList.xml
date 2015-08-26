@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0  -->
-<!-- Isengard 7.1.11 -->
+<!-- Isengard 7.1.11/7.1.12 -->
 
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 70   ##################################################################################-->
@@ -1219,7 +1219,7 @@
 				<control type="group">
 					<description>MOVIE CASE</description>
 					<include>Animation_Fade</include>
-					<visible>!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 					<control type="image">
 						<description>MOVIE POSTER REFLECTION</description>
 						<posx>-5</posx>

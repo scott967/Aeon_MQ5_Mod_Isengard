@@ -1,4 +1,6 @@
-	<!-- Aeon MQ 5 Helix 6.1.1/6.1.2 by lizard/6.1.6 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.1/6.1.2 by lizard/6.1.6 -->
+<!-- Isengard 7.1.12 -->
 
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
@@ -469,7 +471,7 @@
 
 				<control type="group"><!-- FILMES ESTOJO -->
 					<include>Animation_Fade</include>
-					<visible>!Skin.HasSetting(norightlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>!Skin.HasSetting(norightlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 					<control type="image"><!-- Poster reflexo -->
 						<posx>-5</posx>
 						<posy>436</posy>

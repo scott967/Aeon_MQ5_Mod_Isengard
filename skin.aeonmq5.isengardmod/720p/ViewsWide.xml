@@ -1,5 +1,6 @@
-	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.2 -->
-	<!-- Isengardmod 7.1.11 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.2 -->
+<!-- Isengardmod 7.1.11/7/1/12 -->
 
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
@@ -557,7 +558,7 @@
 					<control type="group"><!-- FILMES ESTOJO -->
 						<include>Animation_Fade</include>
 						<animation effect="slide" start="0,0" end="-33,0" time="500" delay="50" tween="cubic" easing="in" condition="!Skin.HasSetting(nowidediscart) + !IsEmpty(ListItem.Art(discart)) + Control.IsVisible(9923)">Conditional</animation>
-						<visible>!Skin.HasSetting(nowidevideocase) + Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | !Skin.HasSetting(nowidevideocase) + [Container.Content(musicvideos) | Container.Content(sets)]</visible>
+						<visible>!Skin.HasSetting(nowidevideocase) + Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | !Skin.HasSetting(nowidevideocase) + [Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 						<control type="image"><!-- Poster reflexo -->
 							<posx>205</posx>
 							<posy>416</posy>

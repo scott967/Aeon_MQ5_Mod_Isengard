@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!-- Aeon MQ 5 Helix 6.1.0  -->
-<!-- Isengard 7.1.10/7.1.11 -->
+<!-- Isengard 7.1.10/7.1.11/7.1.12 -->
 
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
@@ -573,7 +573,7 @@
 
 				<control type="group"><!-- FILMES ESTOJO -->
 					<include>Animation_Fade</include>
-					<visible>!Skin.HasSetting(nolowlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)]</visible>
+					<visible>!Skin.HasSetting(nolowlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)] + ![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 					<control type="image"><!-- Poster reflexo -->
 						<posx>-5</posx>
 						<posy>434</posy>
