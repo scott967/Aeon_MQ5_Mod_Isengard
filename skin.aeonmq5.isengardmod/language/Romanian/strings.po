@@ -1606,7 +1606,7 @@ msgctxt "#31347"
 msgid "Next Episode"
 msgstr "Episodul Următor"
 
-msgctxt "#31448"
+msgctxt "#31348"
 msgid "TV Shows at this day"
 msgstr "Seriale ce rulează azi"
 

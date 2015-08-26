@@ -1614,7 +1614,7 @@ msgctxt "#31347"
 msgid "Next Episode"
 msgstr "Следующий эпизод"
 
-msgctxt "#31448"
+msgctxt "#31348"
 msgid "TV Shows at this day"
 msgstr "Сериалы сегодня"
 

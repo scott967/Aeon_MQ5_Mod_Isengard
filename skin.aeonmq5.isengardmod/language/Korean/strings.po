@@ -1607,7 +1607,7 @@ msgctxt "#31347"
 msgid "Next Episode"
 msgstr "다음 에피소드"
 
-msgctxt "#31448"
+msgctxt "#31348"
 msgid "TV Shows at this day"
 msgstr "선택한 날의 TV 쇼"
 

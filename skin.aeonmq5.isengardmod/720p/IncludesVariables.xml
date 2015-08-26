@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2/6.1.3/6.1.4/6.1.5/6.1.6/6.1.7/6.1.8 -->
-	<!-- Aeon MQ5 Isengard 7.1.8/7.1.9/7.1.10/7.1.11 -->
+	<!-- Aeon MQ5 Isengard 7.1.8/7.1.9/7.1.10/7.1.11/7.1.12 -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>7.1.11 Isengard[COLOR=80FFFFFF] | [/COLOR]08/15/2015</value>
+		<value>7.1.12 Isengard[COLOR=80FFFFFF] | [/COLOR]08/30/2015</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -2406,13 +2406,13 @@
 		<value condition="Control.HasFocus(206)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31347]: [/COLOR]$INFO[Container(206).ListItem.Property(ShortTime)] - $INFO[Container(206).ListItem.Property(NextDate)] - [COLOR=$VAR[value_headercolor]]$INFO[Container(206).ListItem.Property(NextNumber)] - $INFO[Container(206).ListItem.Property(NextTitle)][/COLOR]</value>
 	</variable>
 	<variable name="value_nextairedmultilabel">
-		<value condition="Control.HasFocus(200)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(200).NumItems]</value>
-		<value condition="Control.HasFocus(201)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(201).NumItems]</value>
-		<value condition="Control.HasFocus(202)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(202).NumItems]</value>
-		<value condition="Control.HasFocus(203)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(203).NumItems]</value>
-		<value condition="Control.HasFocus(204)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(204).NumItems]</value>
-		<value condition="Control.HasFocus(205)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(205).NumItems]</value>
-		<value condition="Control.HasFocus(206)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31448]: [/COLOR]$INFO[Container(206).NumItems]</value>
+		<value condition="Control.HasFocus(200)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(200).NumItems]</value>
+		<value condition="Control.HasFocus(201)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(201).NumItems]</value>
+		<value condition="Control.HasFocus(202)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(202).NumItems]</value>
+		<value condition="Control.HasFocus(203)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(203).NumItems]</value>
+		<value condition="Control.HasFocus(204)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(204).NumItems]</value>
+		<value condition="Control.HasFocus(205)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(205).NumItems]</value>
+		<value condition="Control.HasFocus(206)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31348]: [/COLOR]$INFO[Container(206).NumItems]</value>
 	</variable>
 	<variable name="value_nextairedstudio">
 		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Network)]</value>
