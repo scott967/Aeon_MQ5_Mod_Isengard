@@ -1,3 +1,8 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 08/30/2015[/COLOR][/B]
+Fix:  Low List view options missing for videos
+Fix:  Music video poster when opening from music library
+Fix:  Dialog Add Source
+
 [B][COLOR=FFFF8C00]BUILD 7.1.11 - RELEASE DATE 08/15/2015[/COLOR][/B]
 Added:  Support for Hungarian language charaters in all caps font
 Fixed:  Advanced Filter radio button in top menu
