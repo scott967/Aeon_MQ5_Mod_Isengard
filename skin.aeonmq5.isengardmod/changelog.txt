@@ -1,7 +1,10 @@
-[B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 08/30/2015[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
 Fix:  Low List view options missing for videos
 Fix:  Music video poster when opening from music library
 Fix:  Dialog Add Source
+Fix:  Bad text label string assignment for "MID LIST"
+Added:  Option to allow/prevent display of pseudo-discart for TV Shows and Seasons
+Improved:  OSD menu for repeating the playlist label is changed from REPEAT to REPEAT OFF when off
 
 [B][COLOR=FFFF8C00]BUILD 7.1.11 - RELEASE DATE 08/15/2015[/COLOR][/B]
 Added:  Support for Hungarian language charaters in all caps font
