@@ -2589,6 +2589,10 @@ msgctxt "#31587"
 msgid "ADD CONTENT IN OPTION"
 msgstr "DODAJ SADRŽAJ U OPCIJE"
 
+msgctxt "#31588"
+msgid "USE DISC FOR TV SHOWS/SEASONS"
+msgstr "USE DISC FOR TV SHOWS/SEASONS"
+
 msgctxt "#31589"
 msgid "SEASON"
 msgstr "SEZONA"

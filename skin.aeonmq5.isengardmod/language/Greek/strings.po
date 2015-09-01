@@ -2588,6 +2588,10 @@ msgctxt "#31587"
 msgid "ADD CONTENT IN OPTION"
 msgstr "ΠΡΟΣΘΗΚΗ ΠΕΡΙΕΧΟΜΕΝΟΥ ΣΤΗΝ ΕΠΙΛΟΓΗ"
 
+msgctxt "#31588"
+msgid "USE DISC FOR TV SHOWS/SEASONS"
+msgstr "USE DISC FOR TV SHOWS/SEASONS"
+
 msgctxt "#31589"
 msgid "SEASON"
 msgstr "ΚΥΚΛΟΣ"

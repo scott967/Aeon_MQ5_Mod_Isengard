@@ -447,7 +447,7 @@
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="!Skin.HasSetting(nolowlistvideocase)">Conditional</animation>
-					<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | Skin.HasSetting(nolowlistdiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
+					<visible>![[IsEmpty(ListItem.Art(discart)) + [IsEmpty(ListItem.Art(poster)) | [Skin.HasSetting(nodisctvshow) + [Container.content(tvshows) | Container.Content(seasons)]]]] | Skin.HasSetting(nolowlistdiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<posx>112</posx>
 						<posy>70</posy>

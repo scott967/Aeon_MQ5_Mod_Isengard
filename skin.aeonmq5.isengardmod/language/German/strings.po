@@ -2600,6 +2600,10 @@ msgctxt "#31587"
 msgid "ADD CONTENT IN OPTION"
 msgstr "INHALT ÜBER OPTIONEN HINZUFÜGEN"
 
+msgctxt "#31588"
+msgid "USE DISC FOR TV SHOWS/SEASONS"
+msgstr "USE DISC FOR TV SHOWS/SEASONS"
+
 msgctxt "#31589"
 msgid "SEASON"
 msgstr "STAFFEL"

@@ -358,7 +358,7 @@
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
 						<!-- <visible>![IsEmpty(ListItem.Art(discart)) | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible> -->
-						<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
+						<visible>![[IsEmpty(ListItem.Art(discart)) + [IsEmpty(ListItem.Art(poster)) | [Skin.HasSetting(nodisctvshow) + [Container.content(tvshows) | Container.Content(seasons)]]]] | SubString(skin.string(widemovies.art),banner) | Skin.HasSetting(nowidediscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(25) + Control.IsVisible(9923)</visible>
 						<control type="image">
 							<posx>270</posx>
 							<posy>50</posy>

@@ -1285,6 +1285,12 @@
 					<onclick>Skin.ToggleSetting(noscrollletters)</onclick>
 					<selected>!Skin.HasSetting(noscrollletters)</selected>
 				</control>
+				<control type="radiobutton" id="9324">
+					<include>TopMenuRadioButton</include>
+					<label>$LOCALIZE[31588]</label>
+					<onclick>Skin.ToggleSetting(nodisctvshow)</onclick>
+					<selected>!Skin.HasSetting(nodisctvshow)</selected>
+				</control>
 				<control type="button" id="9319"><!-- ArtWork Downloader Solo Mode-->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_addon1_solo]</label>
