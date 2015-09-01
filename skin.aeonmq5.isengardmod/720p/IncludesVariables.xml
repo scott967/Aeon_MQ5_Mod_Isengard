@@ -4,7 +4,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>7.1.12 Isengard[COLOR=80FFFFFF] | [/COLOR]08/30/2015</value>
+		<value>7.1.12 Isengard[COLOR=80FFFFFF] | [/COLOR]09/01/2015</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -2141,7 +2141,7 @@
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(8) + Player.Forwarding">$VAR[value_seekforward]</value>
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(9) + !VideoPlayer.Content(LiveTV)">$LOCALIZE[31306]</value><!-- next -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(9) + VideoPlayer.Content(LiveTV)">+ $LOCALIZE[31763]</value><!-- + canal -->
-		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486]</value><!-- repeat -->
+		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(11)">$LOCALIZE[590]</value><!-- random -->
@@ -3512,7 +3512,7 @@
 		<value condition="Container(100).HasFocus(8)">$LOCALIZE[31299]</value><!-- book -->
 		<value condition="Container(100).HasFocus(9)">$LOCALIZE[31300]</value><!-- subtitle -->
 		<value condition="Container(100).HasFocus(10)">$LOCALIZE[31035]</value><!-- playlist -->
-		<value condition="Container(100).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486]</value><!-- repeat -->
+		<value condition="Container(100).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Container(100).HasFocus(11) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Container(100).HasFocus(11) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
 		<value condition="Container(100).HasFocus(12)">$LOCALIZE[590]</value><!-- random -->
@@ -3549,7 +3549,7 @@
 		<value condition="Container(101).HasFocus(4)">$LOCALIZE[31375]</value><!-- general settings -->
 		<value condition="Container(101).HasFocus(9)">$LOCALIZE[31463]</value><!-- animation background -->
 		<value condition="Container(101).HasFocus(10)">$LOCALIZE[31035]</value><!-- playlist -->
-		<value condition="Container(101).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486]</value><!-- repeat -->
+		<value condition="Container(101).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Container(101).HasFocus(11) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Container(101).HasFocus(11) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
 		<value condition="Container(101).HasFocus(12)">$LOCALIZE[590]</value><!-- random -->
