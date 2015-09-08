@@ -1,4 +1,5 @@
 [B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
+Fix:  Typo in incldue for initializing logoff menu
 Fix:  Low List view options missing for videos
 Fix:  Music video poster when opening from music library
 Fix:  Dialog Add Source
