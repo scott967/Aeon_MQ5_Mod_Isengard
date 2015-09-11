@@ -2144,7 +2144,8 @@
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(10) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
-		<value condition="Control.HasFocus(600) + Container(600).HasFocus(11)">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Control.HasFocus(600) + Container(600).HasFocus(11) + Playlist.IsRandom">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Control.HasFocus(600) + Container(600).HasFocus(11) + !Playlist.IsRandom">$LOCALIZE[590] $LOCALIZE[591]</value><!-- not random -->
 		<value condition="Control.HasFocus(600) + Container(600).HasFocus(12)">$LOCALIZE[31907]</value><!-- fullscreen -->
 	</variable>
 	<variable name="value_playericon_repeat">
@@ -3515,7 +3516,8 @@
 		<value condition="Container(100).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Container(100).HasFocus(11) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Container(100).HasFocus(11) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
-		<value condition="Container(100).HasFocus(12)">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Container(100).HasFocus(12) + Playlist.IsRandom">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Container(100).HasFocus(12) + !Playlist.IsRandom">$LOCALIZE[590] $LOCALIZE[591]</value><!-- not random -->
 		<value condition="Container(100).HasFocus(13)">$LOCALIZE[31754] +</value><!-- volumeup -->
 		<value condition="Container(100).HasFocus(14)">$LOCALIZE[31754] -</value><!-- volumedown -->
 		<value condition="Container(100).HasFocus(15)">$LOCALIZE[31755]</value><!-- mute -->
@@ -3552,7 +3554,8 @@
 		<value condition="Container(101).HasFocus(11) + ![Playlist.IsRepeat | Playlist.IsRepeatOne]">$LOCALIZE[486] $LOCALIZE[31711]</value><!-- repeat -->
 		<value condition="Container(101).HasFocus(11) + Playlist.IsRepeatOne">$LOCALIZE[487]</value><!-- repeat one -->
 		<value condition="Container(101).HasFocus(11) + Playlist.IsRepeat">$LOCALIZE[488]</value><!-- repeat all -->
-		<value condition="Container(101).HasFocus(12)">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Container(101).HasFocus(12) + Playlist.IsRandom">$LOCALIZE[590]</value><!-- random -->
+		<value condition="Container(101).HasFocus(12) + !Playlist.IsRandom">$LOCALIZE[590] $LOCALIZE[591]</value><!-- not random -->
 		<value condition="Container(101).HasFocus(13)">$LOCALIZE[31754] +</value><!-- volumeup -->
 		<value condition="Container(101).HasFocus(14)">$LOCALIZE[31754] -</value><!-- volumedown -->
 		<value condition="Container(101).HasFocus(15)">$LOCALIZE[31755]</value><!-- mute -->
