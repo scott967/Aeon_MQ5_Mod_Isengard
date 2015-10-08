@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2/6.1.3/6.1.4/6.1.5/6.1.6/6.1.7/6.1.8 -->
-	<!-- Aeon MQ5 Isengard 7.1.8/7.1.9/7.1.10/7.1.11/7.1.12/7.1.13 -->
+	<!-- Aeon MQ5 Isengard 7.1.8/7.1.9/7.1.10/7.1.11/7.1.12 -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>7.1.13 Isengard[COLOR=80FFFFFF] | [/COLOR]10/15/2015</value>
+		<value>7.1.12 Isengard[COLOR=80FFFFFF] | [/COLOR]09/01/2015</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -2905,7 +2905,7 @@
 	</variable>
 	<!--  music video changes from here  -->	
 	<variable name="value_ground11_label"><!-- Para vistas que sejam lista -->
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$LOCALIZE[557]</value>
+		<value condition="Container.Content(musicvideos)">$LOCALIZE[557]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(sets)">$LOCALIZE[21875]</value><!-- Pais -->
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[31233]</value><!-- Estreou -->
 		<value condition="Container.Content(artists)">$LOCALIZE[176]</value><!-- Estilo Artistas -->
@@ -2915,7 +2915,7 @@
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[24051]</value><!-- Versao-->
 	</variable>
 	<variable name="value_ground11_value">
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist)">$INFO[ListItem.Country]$INFO[Window(0).Property(Set.Movies.Country)]</value>
 		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Country)]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
@@ -2945,14 +2945,14 @@
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.Property(Addon.Broken), | ]</value>
 	</variable>
 	<variable name="value_ground13_label"><!-- Para vistas que sejam lista -->
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$LOCALIZE[558]</value>
+		<value condition="Container.Content(musicvideos)">$LOCALIZE[558]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)">$LOCALIZE[20388]</value><!-- Estudio -->
 		<value condition="Container.Content(artists) | Container.Content(albums)">$LOCALIZE[175]</value><!-- Moods Artistas/Albuns -->
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$LOCALIZE[31788]</value><!-- Desenvolvedor -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[21863]</value><!-- Criador -->
 	</variable>
 	<variable name="value_ground13_value">
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Album]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(0).Property(Set.Movies.Studio)]</value>
 		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Studio)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>

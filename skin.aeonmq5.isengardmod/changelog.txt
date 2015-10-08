@@ -1,9 +1,6 @@
-[B][COLOR=FFFF8C00]BUILD 7.1.13 - RELEASE DATE 10/15/2015[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 7.1.13 - RELEASE DATE 10/01/2015[/COLOR][/B]
 Added:  Support for CinemaVision addon
 Fixed:  SmartPlaylistEditor.xml filename case
-Improved:  System (shutdown) dialog playlist option and layoout
-Improved:  Rightlist display of now playing media
-Improved:  Music video display for video playlist
 
 [B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
 Fix:  Typo in incldue for initializing logoff menu
