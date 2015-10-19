@@ -3332,6 +3332,8 @@
 		<value condition="Container.Content(studios) + !Window.IsActive(2000)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20388]: [/COLOR]$INFO[Container.NumItems]</value>
 		<value condition="Container.Content(genres) + !Window.IsActive(2000)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[135]: [/COLOR]$INFO[Container.NumItems]</value>
 		<value condition="Container.Content(years) + !Window.IsActive(2000)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[652]: [/COLOR]$INFO[Container.NumItems]</value>
+		<value condition="Window.IsActive(28) + MusicPartyMode.Enabled + !Window.IsActive(2000)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[589] $LOCALIZE[31210]: [/COLOR]$INFO[MusicPartyMode.SongsPlayed] / $INFO[MusicPartyMode.MatchingSongs]</value>
+		<value condition="Window.IsActive(28) + !MusicPartyMode.Enabled + !Window.IsActive(2000)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[559] $LOCALIZE[31582]: [/COLOR]$INFO[Container.NumItems]</value>
 		<value condition="Window.IsActive(4)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31445][/COLOR]</value>
 		<value condition="Window.IsActive(29)">[COLOR=$VAR[value_headercolor]]Aeon MQ 5 - [/COLOR]$VAR[SkinVersion]</value>
 		<value condition="Window.IsActive(2000) + Control.Hasfocus(3)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31210]: [/COLOR]$INFO[Container(3).NumItems] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31215]: [/COLOR]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages]</value>
