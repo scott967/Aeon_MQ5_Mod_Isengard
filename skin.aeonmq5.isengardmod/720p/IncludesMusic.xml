@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.7 -->
-<!-- Isengard 7.1.11 Mid List -->
+<!-- Isengard 7.1.11 Mid List/7.1.13 -->
 
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
@@ -33,7 +33,7 @@
 			<control type="multiimage" id="5033"><!-- Extra Fanart Song -->
 				<include>WindowBG</include>
 				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-				<visible>Container.Content(songs) + SubString(skin.string(musicfanart),extra)</visible>
+				<visible>[Container.Content(songs) | Container.Content(playlists)] + SubString(skin.string(musicfanart),extra)</visible>
 			</control>
 			<control type="group"><!-- default group -->
 				<include>Animation_Window</include>
