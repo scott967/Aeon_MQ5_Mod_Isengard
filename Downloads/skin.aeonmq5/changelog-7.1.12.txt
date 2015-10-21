@@ -1,12 +1,26 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.13 - RELEASE DATE 10/25/2015[/COLOR][/B]
+Added:  Support for CinemaVision addon
+Fixed:  SmartPlaylistEditor.xml filename case
+Improved:  System (shutdown) dialog playlist option and layout
+Improved:  Rightlist display of now playing media
+Improved:  Music video display for video playlist
+Fixed:  Playlist button on OSD video and audio menus
+Improved:  Video playlist window now can select info bar
+Improved:  Video playlist window now can select info bar on/off
+Improved:  Video playlist buttons now available on top menu (like audio playlist)
+Improved:  Select dialog shows "now playing" video in background
+Improved:  Midlist view now allows optional use of clearart on right
+
 [B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
-Fix:  Typo in incldue for initializing logoff menu
-Fix:  Low List view options missing for videos
-Fix:  Music video poster when opening from music library
-Fix:  Dialog Add Source
-Fix:  Bad text label string assignment for "MID LIST"
+Fixed:  Typo in incldue for initializing logoff menu
+Fixed:  Low List view options missing for videos
+Fixed:  Music video poster when opening from music library
+Fixed:  Dialog Add Source
+Fixed:  Bad text label string assignment for "MID LIST"
 Added:  Option to allow/prevent display of pseudo-discart for TV Shows and Seasons
 Improved:  OSD menu for repeating the playlist label is changed from REPEAT to REPEAT OFF when off
 Improved:  OSD menu for randomizing the playlist label is changed from RANDOM to RANDOM OFF
+Fixed:  removed service.subtitles.opensubtitles from dependencies (add-on removed from Kodi repo)
 
 [B][COLOR=FFFF8C00]BUILD 7.1.11 - RELEASE DATE 08/15/2015[/COLOR][/B]
 Added:  Support for Hungarian language charaters in all caps font
