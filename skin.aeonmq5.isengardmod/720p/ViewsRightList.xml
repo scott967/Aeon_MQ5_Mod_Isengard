@@ -150,7 +150,7 @@
 					<control type="label">
 						<include>RightListLabel</include>
 						<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
-						<visible>!Container.Content(songs)</visible>
+						<!-- <visible>!Container.Content(songs)</visible> -->
 					</control>
 				</control>
 

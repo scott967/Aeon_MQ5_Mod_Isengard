@@ -2900,7 +2900,8 @@
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31036][/COLOR]</value><!-- Anos -->
 	</variable>
 	<variable name="value_ground6_value">
-		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Year]</value>
+		<value condition="Window.IsActive(500) + Player.HasAudio">$LOCALIZE[31582]</value>
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left) + ![Window.IsActive(500) + Player.HasAudio]" >$INFO[ListItem.Year]</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Years)]</value>
 	</variable>
 	<!--  music video changes from here  -->	
@@ -2945,6 +2946,7 @@
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.Property(Addon.Broken), | ]</value>
 	</variable>
 	<variable name="value_ground13_label"><!-- Para vistas que sejam lista -->
+		<value condition="Container.Content(songs)">$LOCALIZE[369]</value>
 		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$LOCALIZE[558]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)">$LOCALIZE[20388]</value><!-- Estudio -->
 		<value condition="Container.Content(artists) | Container.Content(albums)">$LOCALIZE[175]</value><!-- Moods Artistas/Albuns -->
@@ -2952,6 +2954,7 @@
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[21863]</value><!-- Criador -->
 	</variable>
 	<variable name="value_ground13_value">
+		<value condition="Container.Content(songs)">$VAR[value_songinfo_title]</value>
 		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !IsEmpty(ListItem.Artist)]">$INFO[ListItem.Album]</value>
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(0).Property(Set.Movies.Studio)]</value>
 		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Studio)]</value>
@@ -3627,8 +3630,8 @@
 		<value condition="Container.Content(songs) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Window.IsActive(135)]">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ]</value>
 	</variable>
 	<variable name="value_songinfo_title">
-		<value condition="!Player.HasAudio">$INFO[ListItem.Label]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Title]</value>
+		<value condition="!Window.IsActive(500) | !Player.HasAudio">$INFO[ListItem.Label]</value>
+		<value condition="Window.IsActive(500) + Player.HasAudio">$INFO[MusicPlayer.Title]</value>
 	</variable>
 	<variable name="value_songinfo_artist">
 		<value condition="!Player.HasAudio">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ]</value>
@@ -3647,13 +3650,13 @@
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Genre]</value>
 	</variable>
 	<variable name="value_songinfo_track">
-		<value condition="!Player.HasAudio">$INFO[ListItem.TrackNumber]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber]</value>
+		<value condition="!Window.IsActive(500) | !Player.HasAudio">$INFO[ListItem.TrackNumber]</value>
+		<value condition="Window.IsActive(500) + Player.HasAudio">$INFO[MusicPlayer.TrackNumber]</value>
 	</variable>
 	<variable name="value_songinfo_duration">
-		<value condition="!Player.HasAudio + SubString(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
-		<value condition="![Player.HasAudio | SubString(ListItem.Duration,min)]">$INFO[ListItem.Duration] $LOCALIZE[31961]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Duration]</value>
+		<value condition="SubString(ListItem.Duration,min) + [!Window.IsActive(500) | [Window.IsActive(500) + !Player.HasAudio]]">$INFO[ListItem.Duration]</value>
+		<value condition="!SubString(ListItem.Duration,min) + [!Window.IsActive(500) | [Window.IsActive(500) + !Player.HasAudio]]">$INFO[ListItem.Duration] $LOCALIZE[31961]</value>
+		<value condition="Window.IsActive(500) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 	</variable>
 	<variable name="value_songinfo_plot">
 		<value condition="!Player.HasAudio">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
