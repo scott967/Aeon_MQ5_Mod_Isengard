@@ -1,4 +1,6 @@
-	<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
+<!-- Isengard 7.1.13 -->
 
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
@@ -1668,7 +1670,8 @@
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31066]</label2>
 					<property name="id">movies</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],moviecinema)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.cinema.experience,movietitles))</onclick>
+					<onclick condition="System.HasAddon(script.cinema.experience)">Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.cinema.experience,movietitles))</onclick>
+					<onclick condition="!System.HasAddon(script.cinema.experience)">RunPlugin(plugin://script.cinema.experience)</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
