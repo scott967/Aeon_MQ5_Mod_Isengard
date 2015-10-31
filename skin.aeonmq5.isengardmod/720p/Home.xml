@@ -1,5 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.2 /6.1.3/6.1.8 -->
-	<!-- Isengard 7.1.11 -->
+	<!-- Isengard 7.1.117.1.13 -->
 
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -1131,9 +1131,9 @@
 				</control>
 				<control type="grouplist"><!-- Contador da reproducao -->
 					<posx>0</posx>
-					<posy>535</posy>
+					<posy>538</posy> <!-- was 535 -->
 					<width>1280</width>
-					<height>65</height>
+					<height>70</height> <!-- was 65 -->
 					<itemgap>0</itemgap>
 					<control type="label">
 						<include condition="StringCompare(skin.string(font),font1)">Font1</include>
@@ -1144,6 +1144,7 @@
 						<include condition="StringCompare(skin.string(font),font6)">Font6</include>
 						<include condition="StringCompare(skin.string(font),font7)">Font7</include>
 						<include condition="StringCompare(skin.string(font),font8)">Font8</include>
+						<aligny>center</aligny>
 						<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
 						<animation effect="fade" start="0" end="100" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 						<visible>Player.HasMedia + System.IdleTime(8)</visible>
@@ -1157,6 +1158,7 @@
 						<include condition="StringCompare(skin.string(font),font6)">Font6</include>
 						<include condition="StringCompare(skin.string(font),font7)">Font7</include>
 						<include condition="StringCompare(skin.string(font),font8)">Font8</include>
+						<aligny>center</aligny>
 						<label>$INFO[Container(510).ListItem.Label]</label>
 						<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 						<animation effect="fade" start="100" end="0" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
@@ -1171,6 +1173,7 @@
 						<include condition="StringCompare(skin.string(font),font6)">Font6</include>
 						<include condition="StringCompare(skin.string(font),font7)">Font7</include>
 						<include condition="StringCompare(skin.string(font),font8)">Font8</include>
+						<aligny>center</aligny>
 						<label>$VAR[value_playercontrols]</label>
 						<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 						<animation effect="fade" start="100" end="0" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
