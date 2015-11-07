@@ -1306,6 +1306,8 @@
 					<include>TopMenuRadioButton</include>
 					<label>$VAR[value_addon2]</label>
 					<onclick condition="System.HasAddon(script.tvtunes)">Skin.ToggleSetting(ontvtunes)</onclick>
+					<onclick condition="System.HasAddon(script.tvtunes) + !Skin.HasSetting(ontvtunes)">SetProperty("TvTunesBlocked", "true")</onclick>
+					<onclick condition="System.HasAddon(script.tvtunes) + Skin.HasSetting(ontvtunes)">ClearProperty("TvTunesBlocked")</onclick>
 					<onclick condition="!System.HasAddon(script.tvtunes)">ActivateWindow(Programs,Addons,return)</onclick>
 					<selected>System.HasAddon(script.tvtunes) + Skin.HasSetting(ontvtunes)</selected>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>

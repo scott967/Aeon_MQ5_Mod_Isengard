@@ -5,7 +5,7 @@
 <window id="2003">
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
-	<onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
+<!-- 	<onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload> -->
 	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<controls>
 		<control type="group"><!-- default group -->
@@ -389,7 +389,7 @@
 				<posy>174</posy>
 				<height>165</height>
 				<width>190</width>
-				<aspectratio align="bottom">keep</aspectratio>
+				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
 				<visible>!Container.Content(episodes)</visible>
 			</control>
@@ -794,9 +794,9 @@
 							<visible>![Container.Content(episodes) | Container.Content(seasons) | Skin.HasSetting(kioskininfo)]</visible>
 						</item>
 						<item id="21"><!-- TvTunes Obter tema Filmes -->
-							<label>31127</label>
+							<label>TVTUNES $LOCALIZE[31893] </label>
 							<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-							<visible>Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes) + [Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
+							<visible>Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
 						</item>
 						<item id="20"><!-- Editor de info -->
 							<label>31671</label>
