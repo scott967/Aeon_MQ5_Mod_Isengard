@@ -22,8 +22,8 @@
 				<posy>120</posy>
 				<width>1040</width>
 				<height>600</height>
-				<timeperimage>6000</timeperimage>
-				<randomize>true</randomize>
+				<!-- <timeperimage>6000</timeperimage>
+				<randomize>true</randomize> -->
 				<aspectratio>stretch</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<texture>$VAR[value_menutheme_movies]</texture>

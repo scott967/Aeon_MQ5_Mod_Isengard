@@ -390,7 +390,7 @@
 		<font>Font_60e</font>
 		<textoffsety>6</textoffsety>
 		<align>center</align>
-		<aligny>tpo</aligny>
+		<aligny>top</aligny>
 		<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
 		<scroll>true</scroll>
 	</include>
@@ -402,7 +402,7 @@
 		<font>Font_60f</font>
 		<textoffsety>3</textoffsety>
 		<align>center</align>
-		<aligny>tpo</aligny>
+		<aligny>top</aligny>
 		<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
 		<scroll>true</scroll>
 	</include>
@@ -1831,7 +1831,6 @@
 		<width>500</width>
 		<height>60</height>
 		<align>right</align>
-		<textcolor>FFFFFAF0</textcolor>
 		<font>Font_17</font>
 		<textcolor>FFFFFAF0</textcolor>
 		<scroll>true</scroll>

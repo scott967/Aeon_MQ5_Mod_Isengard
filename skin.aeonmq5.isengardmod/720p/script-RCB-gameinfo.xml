@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-	<!-- Aeon MQ 5 Isengard 7.1.10 -->
+	<!-- Aeon MQ 5 Isengard 7.1.10/7.1.13 -->
 
 <window>
 	<allowoverlay>yes</allowoverlay>
@@ -490,7 +490,6 @@
 							<colordiffuse>70FFFFFF</colordiffuse>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
-							<colordiffuse>FF909090</colordiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout height="170" width="300">

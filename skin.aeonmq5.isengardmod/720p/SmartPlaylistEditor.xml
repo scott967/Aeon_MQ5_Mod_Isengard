@@ -1,5 +1,5 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/Orby -->
-	<!-- Isengard 7.1.9 -->
+	<!-- Isengard 7.1.9/7.1.13 -->
 
 <window id="136">
 	<defaultcontrol always="true">22</defaultcontrol>
@@ -99,7 +99,6 @@
 					<textoffsetx>20</textoffsetx>
 					<texturenofocus>-</texturenofocus>
 					<texturefocus>settings_button_focus.png</texturefocus>
-					<aligny>center</aligny>
 				</control>
 				<control type="label"><!-- find items where -->
 					<posx>240</posx>
