@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!-- Aeon MQ 5 Helix 6.1.0 -->
-<!-- Isengard 7.1.10 -->
+<!-- Isengard 7.1.10/7.1.13 -->
 
 <window>
 	<defaultcontrol always="true">9100</defaultcontrol>
@@ -3692,7 +3692,6 @@
 				<onright condition="Container(9100).HasFocus(33)">SetFocus(200)</onright>
 				<onright condition="Container(9100).HasFocus(34)">SetFocus(404)</onright>
 				<viewtype>list</viewtype>
-				<orientation>vertical</orientation>
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
 				<movement>2</movement>
