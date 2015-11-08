@@ -3594,7 +3594,7 @@ msgstr "...Defining sub menus for tv"
 
 msgctxt "#31836"
 msgid "...Defining sub menus for musics"
-msgstr "...Defining sub menus for musics"
+msgstr "...Defining sub menus for music"
 
 msgctxt "#31837"
 msgid "...Defining sub menus for weather"

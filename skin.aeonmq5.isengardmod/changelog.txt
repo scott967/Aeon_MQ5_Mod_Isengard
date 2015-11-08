@@ -17,6 +17,7 @@ Improved:  OK dialog now has visible OK button to click/close dialog
 Fixed:  Vertical alignment of main menu items
 Fixed:  TVTunes interface for TVTunes 5.0 and up
 Fixed:  Tag cleanup
+Fixed:  English label translation musics -- music
 
 [B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
 Fixed:  Typo in incldue for initializing logoff menu
