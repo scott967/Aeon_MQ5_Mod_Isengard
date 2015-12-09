@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Isengard 7.1.13 -->
+<!-- Isengard 7.1.13/7.1.14 -->
 
 <window type="dialog" id="2000">
 	<defaultcontrol>3</defaultcontrol>
 	<zorder>3</zorder>
-	<onload condition="Player.HasVideo">Dialog.Close(124)</onload>
+	<!-- <onload condition="Player.HasVideo">Dialog.Close(124)</onload> -->
 	<onload condition="Player.HasVideo">Dialog.Close(VideoOSD)</onload>
 	<coordinates>
 		<posx>0</posx>
@@ -108,7 +108,7 @@
 					<width>855</width>
 					<height>645</height>
 					<texture>black.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
+					<colordiffuse>90FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -116,7 +116,7 @@
 					<width>855</width>
 					<height>60</height>
 					<texture>black.png</texture>
-					<colordiffuse>90FFFFFF</colordiffuse>
+					<colordiffuse>70FFFFFF</colordiffuse>
 				</control>
 				<control type="label" id="1"><!-- header label -->
 					<posx>45</posx>

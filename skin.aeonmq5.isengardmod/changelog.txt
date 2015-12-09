@@ -1,3 +1,6 @@
+[B][COLOR=FFFF8C00]BUILD 7.1.14 - RELEASE DATE 12/31/2015[/COLOR][/B]
+Fixed:  OSD Audio Settings when Select dialog is needed 
+
 [B][COLOR=FFFF8C00]BUILD 7.1.13 - RELEASE DATE 10/31/2015[/COLOR][/B]
 Added:  Support for CinemaVision addon
 Fixed:  SmartPlaylistEditor.xml filename case
